@@ -1,0 +1,67 @@
+# Revoke / unrevoke a version or set a module's minimum version. Clients pick
+# the change up on their next index refresh: a revoked or too-old installed
+# version is disabled and the user is offered an update.
+name: manage
+on:
+  workflow_dispatch:
+    inputs:
+      action:
+        description: What to do
+        required: true
+        type: choice
+        options: [revoke, unrevoke, min-version]
+      id:
+        description: Module id (e.g. docker)
+        required: true
+      version:
+        description: 'Version (for min-version, empty clears the floor)'
+        required: false
+      reason:
+        description: Revoke reason shown to users
+        required: false
+permissions:
+  contents: write
+concurrency:
+  group: registry
+  cancel-in-progress: false
+env:
+  GOPRIVATE: github.com/git-compass-dev/*
+  GOTOOLCHAIN: local
+jobs:
+  manage:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Access other git-compass-dev repos (read)
+        env:
+          GC_READ_TOKEN: ${{ secrets.GC_READ_TOKEN }}
+        run: git config --global url."https://x-access-token:${GC_READ_TOKEN}@github.com/git-compass-dev/".insteadOf "https://github.com/git-compass-dev/"
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+      - name: Sign the change
+        env:
+          GC_SIGNING_KEY: ${{ secrets.GC_SIGNING_KEY }}
+          ACTION: ${{ inputs.action }}
+          ID: ${{ inputs.id }}
+          VERSION: ${{ inputs.version }}
+          REASON: ${{ inputs.reason }}
+        run: |
+          case "$ACTION" in
+            revoke) go run ./cmd/gcpack revoke -repo . -id "$ID" -version "$VERSION" -reason "$REASON" ;;
+            unrevoke) go run ./cmd/gcpack unrevoke -repo . -id "$ID" -version "$VERSION" ;;
+            min-version) go run ./cmd/gcpack min-version -repo . -id "$ID" -version "$VERSION" ;;
+          esac
+      - name: Commit
+        env:
+          GH_TOKEN: ${{ github.token }}
+          MSG: ${{ inputs.action }} ${{ inputs.id }} ${{ inputs.version }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add catalog.json modules
+          git commit -m "$MSG"
+          git push "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" HEAD:main
+          if [ -f keys/registry.pub ]; then go run ./cmd/gcpack verify -repo .; fi

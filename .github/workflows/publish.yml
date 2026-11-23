@@ -1,0 +1,114 @@
+# Builds a module from its repo, packs one archive per platform, signs the
+# module index + catalog with GC_SIGNING_KEY and publishes:
+#   archives → GitHub release "<id>-v<version>" in this repo
+#   modules/<id>/index.json + catalog.json → main
+# Module repo contract: scripts/package.sh with ALL=1 builds every platform in
+# its manifest into dist/pkg (manifest.json, bin/, ui/).
+name: publish
+on:
+  workflow_dispatch:
+    inputs:
+      repo:
+        description: Module repo in git-compass-dev (e.g. git-compass-docker)
+        required: true
+      ref:
+        description: Branch, tag or commit of the module repo
+        required: true
+        default: main
+      notes_en:
+        description: Release notes (English)
+        required: false
+      notes_tr:
+        description: Release notes (Turkish)
+        required: false
+permissions:
+  contents: write
+concurrency:
+  group: registry
+  cancel-in-progress: false
+env:
+  GOPRIVATE: github.com/git-compass-dev/*
+  GOTOOLCHAIN: local
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Check signing key
+        env:
+          GC_SIGNING_KEY: ${{ secrets.GC_SIGNING_KEY }}
+        run: test -n "$GC_SIGNING_KEY" || (echo "::error::secret GC_SIGNING_KEY is not set" && exit 1)
+      - name: Access other git-compass-dev repos (read)
+        env:
+          GC_READ_TOKEN: ${{ secrets.GC_READ_TOKEN }}
+        run: |
+          git config --global url."https://x-access-token:${GC_READ_TOKEN}@github.com/git-compass-dev/".insteadOf "https://github.com/git-compass-dev/"
+          git config --global --add url."https://x-access-token:${GC_READ_TOKEN}@github.com/git-compass-dev/".insteadOf "ssh://git@github.com/git-compass-dev/"
+          git config --global --add url."https://x-access-token:${GC_READ_TOKEN}@github.com/git-compass-dev/".insteadOf "git@github.com:git-compass-dev/"
+      - name: Check out the module
+        uses: actions/checkout@v4
+        with:
+          repository: git-compass-dev/${{ inputs.repo }}
+          ref: ${{ inputs.ref }}
+          token: ${{ secrets.GC_READ_TOKEN }}
+          path: src
+          persist-credentials: false
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: src/go.mod
+          cache: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Test the module
+        working-directory: src
+        run: go test ./...
+      - name: Build every platform
+        working-directory: src
+        run: ALL=1 bash scripts/package.sh
+      - name: Release name
+        id: rel
+        run: |
+          id=$(jq -r .id src/dist/pkg/manifest.json)
+          ver=$(jq -r .version src/dist/pkg/manifest.json)
+          echo "id=$id" >> "$GITHUB_OUTPUT"
+          echo "version=$ver" >> "$GITHUB_OUTPUT"
+          echo "tag=$id-v$ver" >> "$GITHUB_OUTPUT"
+      - name: Pack and sign
+        env:
+          GC_SIGNING_KEY: ${{ secrets.GC_SIGNING_KEY }}
+          NOTES_EN: ${{ inputs.notes_en }}
+          NOTES_TR: ${{ inputs.notes_tr }}
+          TAG: ${{ steps.rel.outputs.tag }}
+        run: |
+          go build -o "$RUNNER_TEMP/gcpack" ./cmd/gcpack
+          "$RUNNER_TEMP/gcpack" publish -repo . -pkg src/dist/pkg -out "$RUNNER_TEMP/zip" \
+            -download-base "https://github.com/${GITHUB_REPOSITORY}/releases/download/${TAG}" \
+            -notes-en "$NOTES_EN" -notes-tr "$NOTES_TR"
+      - name: Upload archives
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ steps.rel.outputs.tag }}
+          SRC_REPO: ${{ inputs.repo }}
+        run: |
+          sha=$(git -C src rev-parse HEAD)
+          if ! gh release view "$TAG" >/dev/null 2>&1; then
+            gh release create "$TAG" --target "$GITHUB_SHA" --title "$TAG" \
+              --notes "Built from ${SRC_REPO}@${sha}"
+          fi
+          gh release upload "$TAG" "$RUNNER_TEMP"/zip/*.zip --clobber
+      - name: Commit signed index
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ steps.rel.outputs.tag }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add catalog.json modules
+          git commit -m "Publish $TAG"
+          git push "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" HEAD:main
+      - name: Verify
+        run: |
+          if [ -f keys/registry.pub ]; then "$RUNNER_TEMP/gcpack" verify -repo .; fi
