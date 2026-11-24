@@ -89,7 +89,10 @@ jobs:
           NOTES_TR: ${{ inputs.notes_tr }}
           TAG: ${{ steps.rel.outputs.tag }}
         run: |
-          go build -o "$RUNNER_TEMP/gcpack" ./cmd/gcpack
+          # Own module cache: the module build above may have left a shallow
+          # clone of a newer SDK in the shared VCS cache, and fetching this
+          # repo's SDK version from it fails ("shallow file has changed").
+          GOMODCACHE="$RUNNER_TEMP/gcpack-mod" go build -o "$RUNNER_TEMP/gcpack" ./cmd/gcpack
           "$RUNNER_TEMP/gcpack" publish -repo . -pkg src/dist/pkg -out "$RUNNER_TEMP/zip" \
             -download-base "https://github.com/${GITHUB_REPOSITORY}/releases/download/${TAG}" \
             -notes-en "$NOTES_EN" -notes-tr "$NOTES_TR"
