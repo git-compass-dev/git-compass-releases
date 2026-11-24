@@ -1,0 +1,53 @@
+{
+  "signed": {
+    "kind": "module-index",
+    "schema": 1,
+    "id": "debugger-go",
+    "sequence": 1,
+    "expires": "2027-03-24T12:13:18Z",
+    "latest": "1.0.0",
+    "versions": [
+      {
+        "version": "1.0.0",
+        "type": "module",
+        "sdk": "^1.0",
+        "requires": {
+          "debugger": "^1.0"
+        },
+        "released": "2026-11-24T12:13:18Z",
+        "notes": {
+          "en": "First release: Go language support (gopls + Delve).",
+          "tr": "İlk sürüm: Go dil desteği (gopls + Delve)."
+        },
+        "files": {
+          "darwin/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/debugger-go-v1.0.0/debugger-go-1.0.0-darwin-amd64.zip",
+            "sha256": "1b9a35435f769bb0c034fd4e98972ea12e19e9bfecc804d99fdbbf3ba345223d",
+            "size": 5470901
+          },
+          "darwin/arm64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/debugger-go-v1.0.0/debugger-go-1.0.0-darwin-arm64.zip",
+            "sha256": "62d0706f8e50b25d06c1baab6dd9e567e66ec22808db38d186cd0e414dc04471",
+            "size": 5098981
+          },
+          "linux/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/debugger-go-v1.0.0/debugger-go-1.0.0-linux-amd64.zip",
+            "sha256": "37f5d70f11ad4d733920b0041395f51ebfa4e0d36331e251f71ba17eeb0cd3f7",
+            "size": 5352012
+          },
+          "windows/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/debugger-go-v1.0.0/debugger-go-1.0.0-windows-amd64.zip",
+            "sha256": "cf551798a1ee794d11fac052805256ee0e9d353d02c2bf920a7de1a11c38fd74",
+            "size": 5516515
+          }
+        }
+      }
+    ]
+  },
+  "signatures": [
+    {
+      "keyid": "72f91e21d10b0178",
+      "sig": "EXhCWa2gv0BsGoSs55AF8sxZmUiNVbIwcJiWpPTgf/fPK1N9o0A6qF0iujdeXc7Epm9DPSW7cRK9ZAkz1ZFTDw=="
+    }
+  ]
+}

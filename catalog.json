@@ -2,8 +2,8 @@
   "signed": {
     "kind": "module-catalog",
     "schema": 1,
-    "sequence": 19,
-    "expires": "2027-03-24T12:11:22Z",
+    "sequence": 20,
+    "expires": "2027-03-24T12:13:18Z",
     "modules": [
       {
         "id": "ai",
@@ -99,6 +99,20 @@
         "description": {
           "en": "Debug tab: breakpoints, stepping, variables, call stack and debug console",
           "tr": "Hata ayıklama sekmesi: kesme noktaları, adım adım ilerleme, değişkenler, çağrı yığını ve konsol"
+        },
+        "latest": "1.0.0"
+      },
+      {
+        "id": "debugger-go",
+        "type": "module",
+        "group": "dev",
+        "name": {
+          "en": "Go language",
+          "tr": "Go dili"
+        },
+        "description": {
+          "en": "Go language server and debugger for the editor and the Debug tab",
+          "tr": "Düzenleyici ve hata ayıklama sekmesi için Go dil sunucusu ve hata ayıklayıcısı"
         },
         "latest": "1.0.0"
       },
@@ -232,7 +246,7 @@
   "signatures": [
     {
       "keyid": "72f91e21d10b0178",
-      "sig": "p2ptWBK296Ezbd75w9+HvK+MFFT50Hq+qm3xlV5mni+NtEmHO5tTRkd811zIe2vSxTLLBE+lIHta6YaHoLxoDQ=="
+      "sig": "9O6KX2+hb1I6rGOo1MmyrUsv1F1Ux3n9ViQA0ikDA+AI5/bALkOxb+y5ReWQ4VFQQ6h+DCwm8wwn2yElLoxAAg=="
     }
   ]
 }
