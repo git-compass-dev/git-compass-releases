@@ -31,14 +31,14 @@ jobs:
   manage:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           persist-credentials: false
       - name: Access other git-compass-dev repos (read)
         env:
           GC_READ_TOKEN: ${{ secrets.GC_READ_TOKEN }}
         run: git config --global url."https://x-access-token:${GC_READ_TOKEN}@github.com/git-compass-dev/".insteadOf "https://github.com/git-compass-dev/"
-      - uses: actions/setup-go@v5
+      - uses: actions/setup-go@v7
         with:
           go-version-file: go.mod
       - name: Sign the change
