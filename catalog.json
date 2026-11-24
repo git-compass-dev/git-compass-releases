@@ -2,9 +2,23 @@
   "signed": {
     "kind": "module-catalog",
     "schema": 1,
-    "sequence": 14,
-    "expires": "2027-03-24T11:50:51Z",
+    "sequence": 15,
+    "expires": "2027-03-24T11:52:58Z",
     "modules": [
+      {
+        "id": "ai",
+        "type": "module",
+        "group": "ai",
+        "name": {
+          "en": "AI",
+          "tr": "Yapay zekâ"
+        },
+        "description": {
+          "en": "Agent chat, AI terminals, agent flows and Claude commands.",
+          "tr": "Ajan sohbeti, AI terminalleri, ajan akışları ve Claude komutları."
+        },
+        "latest": "0.1.0"
+      },
       {
         "id": "db",
         "type": "module",
@@ -164,7 +178,7 @@
   "signatures": [
     {
       "keyid": "72f91e21d10b0178",
-      "sig": "RnWuPFEtbtNBGXy9+CnLxQXDUCZsOj7lvk9eQSKVw28830xefyeH1aNTWp8+m43St0FAhyBLoL5lGT10Jt+RAQ=="
+      "sig": "/kXXUbdOGs3VIFMPpZNeIclkj/a/ZaYBgu4eBeE74mXsLoOhuumP00W1EM+tZQSbAm4ZSoKQMVyN0CUk8iubBw=="
     }
   ]
 }

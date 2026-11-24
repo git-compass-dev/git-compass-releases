@@ -1,0 +1,50 @@
+{
+  "signed": {
+    "kind": "module-index",
+    "schema": 1,
+    "id": "ai",
+    "sequence": 1,
+    "expires": "2027-03-24T11:52:58Z",
+    "latest": "0.1.0",
+    "versions": [
+      {
+        "version": "0.1.0",
+        "type": "module",
+        "sdk": "^1.0",
+        "released": "2026-11-24T11:52:58Z",
+        "notes": {
+          "en": "First release: AI chat, agents and terminals.",
+          "tr": "İlk sürüm: yapay zekâ sohbeti, ajanlar ve terminaller."
+        },
+        "files": {
+          "darwin/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/ai-v0.1.0/ai-0.1.0-darwin-amd64.zip",
+            "sha256": "ee4b43d373c43379739c9edd324e56ffa9638bcfb082dec34f8514e2a3396da9",
+            "size": 5541318
+          },
+          "darwin/arm64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/ai-v0.1.0/ai-0.1.0-darwin-arm64.zip",
+            "sha256": "7ff2d09b42e3d54c8f17fdbede9b6a7d10880248ccb77ff6e4778d598ccddd94",
+            "size": 5177385
+          },
+          "linux/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/ai-v0.1.0/ai-0.1.0-linux-amd64.zip",
+            "sha256": "f76d4a4af7e677ff9fb8b9a0e89a188db32a82f4fbb92288bb57bc45f135ae04",
+            "size": 5432146
+          },
+          "windows/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/ai-v0.1.0/ai-0.1.0-windows-amd64.zip",
+            "sha256": "f011199c78b7c6bfc06641b2f7b12521604a4d6380ed92de869b9b13fef8f1eb",
+            "size": 5608318
+          }
+        }
+      }
+    ]
+  },
+  "signatures": [
+    {
+      "keyid": "72f91e21d10b0178",
+      "sig": "DJiN3qzLX4OOc0B9/GdMGyA9yCNSe173rOxRRwtU5TEh4lK1UQTlqKU7lIpGUtvKhssB0wRn3SAF9qHI8eoYAg=="
+    }
+  ]
+}
