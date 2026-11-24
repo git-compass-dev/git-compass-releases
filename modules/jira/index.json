@@ -3,10 +3,42 @@
     "kind": "module-index",
     "schema": 1,
     "id": "jira",
-    "sequence": 2,
-    "expires": "2027-03-24T20:30:11Z",
-    "latest": "0.2.0",
+    "sequence": 3,
+    "expires": "2027-03-24T20:43:14Z",
+    "latest": "0.3.0",
     "versions": [
+      {
+        "version": "0.3.0",
+        "type": "module",
+        "sdk": "^1.0",
+        "released": "2026-11-24T20:43:14Z",
+        "notes": {
+          "en": "New Mentions panel: comments that @mention you in the issues of a JQL query, cached locally; a refresh reads only recently updated issues.",
+          "tr": "Yeni Bahsedilenler paneli: bir JQL sorgusunun işlerinde senden bahseden yorumlar. Sonuçlar yerelde saklanır, yenilemede yalnız son güncellenen işler okunur."
+        },
+        "files": {
+          "darwin/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/jira-v0.3.0/jira-0.3.0-darwin-amd64.zip",
+            "sha256": "c08798d3b3f6fef6d5f6aa102094d816111565a52f7ee1a5c166d2a8197a0f01",
+            "size": 5202909
+          },
+          "darwin/arm64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/jira-v0.3.0/jira-0.3.0-darwin-arm64.zip",
+            "sha256": "e21aefc2dc79b915fb676b155eaaef180d65eb773318fa8637bea412cdec24a4",
+            "size": 4848356
+          },
+          "linux/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/jira-v0.3.0/jira-0.3.0-linux-amd64.zip",
+            "sha256": "ad2d9a9d544ed44dbf9de9e5ab656c8e633c63474ff89afd1068c5aab3dc25dd",
+            "size": 5081433
+          },
+          "windows/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/jira-v0.3.0/jira-0.3.0-windows-amd64.zip",
+            "sha256": "9ef94fec4eb32de5929a09dc85448fd3ccc01a89547a207df34e374aa2a12086",
+            "size": 5243602
+          }
+        }
+      },
       {
         "version": "0.2.0",
         "type": "module",
@@ -76,7 +108,7 @@
   "signatures": [
     {
       "keyid": "72f91e21d10b0178",
-      "sig": "uzBQNzAntFh0w++csryo6MwXbvBGSXR2iVK7IRGATaSMBhiADI5qSKLsBF1YH/Wvkk8I6Ykj7P6DNjKMefXEAQ=="
+      "sig": "xm5+pkJiO8Nf7HsRDRSXA4kmgqOdIajOEgKGbsuku5jGTJ/qwSWs3b+ZLE4uWdF7c/2H/+pUz3Yru88TFqJpCg=="
     }
   ]
 }
