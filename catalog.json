@@ -2,9 +2,23 @@
   "signed": {
     "kind": "module-catalog",
     "schema": 1,
-    "sequence": 9,
-    "expires": "2027-03-24T11:38:15Z",
+    "sequence": 10,
+    "expires": "2027-03-24T11:41:36Z",
     "modules": [
+      {
+        "id": "db",
+        "type": "module",
+        "group": "data",
+        "name": {
+          "en": "Databases",
+          "tr": "Veritabanları"
+        },
+        "description": {
+          "en": "Database connections, SQL console, result grid, object tree, history, export and schema diagram.",
+          "tr": "Veritabanı bağlantıları, SQL konsolu, sonuç tablosu, nesne ağacı, geçmiş, dışa aktarma ve şema diyagramı."
+        },
+        "latest": "1.0.0"
+      },
       {
         "id": "docker",
         "type": "module",
@@ -94,7 +108,7 @@
   "signatures": [
     {
       "keyid": "72f91e21d10b0178",
-      "sig": "5qOzOXFjs/Dc8rj/o3yc0zkAfI5lDePyuNhXq423JFSxcJy4KyUK9dhp7Js5iAZvqy6jFVDE7frL/Sr2lH/iBw=="
+      "sig": "kfkkJnmmQH4HOtdw+nVHm0240CNjXnVr6oQiwO5+T6aWwcl7ZG5q0YMfxUjUOM5wIvY601qmSnzfd4rcy0IzBw=="
     }
   ]
 }

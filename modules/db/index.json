@@ -1,0 +1,50 @@
+{
+  "signed": {
+    "kind": "module-index",
+    "schema": 1,
+    "id": "db",
+    "sequence": 1,
+    "expires": "2027-03-24T11:41:36Z",
+    "latest": "1.0.0",
+    "versions": [
+      {
+        "version": "1.0.0",
+        "type": "module",
+        "sdk": "^1.0",
+        "released": "2026-11-24T11:41:36Z",
+        "notes": {
+          "en": "First release: database explorer and SQL editor.",
+          "tr": "İlk sürüm: veritabanı gezgini ve SQL editörü."
+        },
+        "files": {
+          "darwin/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/db-v1.0.0/db-1.0.0-darwin-amd64.zip",
+            "sha256": "ebbfafd603d5804c443ed2c0cc0ff5be1106634b259584c7a8622632109c34a3",
+            "size": 10104127
+          },
+          "darwin/arm64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/db-v1.0.0/db-1.0.0-darwin-arm64.zip",
+            "sha256": "f4a846f93cc129d3c4a947b7f941281d8610ff5ab775867f6ba3eb0a5de38ab0",
+            "size": 9786180
+          },
+          "linux/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/db-v1.0.0/db-1.0.0-linux-amd64.zip",
+            "sha256": "c7b7c76a92df97d8b5bb20e2f1f32e51ac7c2f9f23d1c8760e99e4820f6b0c08",
+            "size": 10117594
+          },
+          "windows/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/db-v1.0.0/db-1.0.0-windows-amd64.zip",
+            "sha256": "d59b4920bde95babc1f737f7c1d210c829f824dab5c63d73614b5306b39dcaa2",
+            "size": 10099408
+          }
+        }
+      }
+    ]
+  },
+  "signatures": [
+    {
+      "keyid": "72f91e21d10b0178",
+      "sig": "Uv5EJXVExWD0a0KaxNl83fG1C6KlxugTKwIRB5CMI1WQq5QRsLUbOuutykNOg1Ij3PCb1DJOfvnW3fHAYkNSCw=="
+    }
+  ]
+}
