@@ -1,0 +1,50 @@
+{
+  "signed": {
+    "kind": "module-index",
+    "schema": 1,
+    "id": "git-base",
+    "sequence": 1,
+    "expires": "2027-03-24T11:28:39Z",
+    "latest": "0.1.0",
+    "versions": [
+      {
+        "version": "0.1.0",
+        "type": "module",
+        "sdk": "^1.0",
+        "released": "2026-11-24T11:28:39Z",
+        "notes": {
+          "en": "First release: Git workspace, history, diff, branches and providers host.",
+          "tr": "İlk sürüm: Git çalışma alanı, geçmiş, diff, dallar ve sağlayıcı altyapısı."
+        },
+        "files": {
+          "darwin/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/git-base-v0.1.0/git-base-0.1.0-darwin-amd64.zip",
+            "sha256": "4dd65206d4a2bebadfaf0600462c8e3678f4ea61e8779c5b0224ed7e5a5d70a3",
+            "size": 5441634
+          },
+          "darwin/arm64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/git-base-v0.1.0/git-base-0.1.0-darwin-arm64.zip",
+            "sha256": "bdf492dac6adb3110226ba4e6c9d6c8529ee884bc45a787e546a333f697370c5",
+            "size": 5131065
+          },
+          "linux/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/git-base-v0.1.0/git-base-0.1.0-linux-amd64.zip",
+            "sha256": "afac71148a7465d9eb072afb6aec569ab1b8ea800793e3aeb1f04dd46e8f22c4",
+            "size": 5313589
+          },
+          "windows/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/git-base-v0.1.0/git-base-0.1.0-windows-amd64.zip",
+            "sha256": "5f595d3a07c9fd75a6d3f05105d5d346531fa81629489dfd54b52c1349cd1711",
+            "size": 5491320
+          }
+        }
+      }
+    ]
+  },
+  "signatures": [
+    {
+      "keyid": "72f91e21d10b0178",
+      "sig": "HUUsqgX8d8SnQbzE1iJ4TuSsoznUUAsGynf0KDMUB071E9zSPbJg+hyK+ybEub9mo8kQv4n6P12yl7ihCOo+DA=="
+    }
+  ]
+}

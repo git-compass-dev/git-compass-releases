@@ -2,8 +2,8 @@
   "signed": {
     "kind": "module-catalog",
     "schema": 1,
-    "sequence": 4,
-    "expires": "2027-03-24T10:50:19Z",
+    "sequence": 5,
+    "expires": "2027-03-24T11:28:39Z",
     "modules": [
       {
         "id": "docker",
@@ -18,13 +18,27 @@
           "tr": "Yerel Docker motoru: compose projesine göre gruplu container'lar, imajlar, volume'lar, loglar ve Docker Desktop başlat/durdur."
         },
         "latest": "0.2.0"
+      },
+      {
+        "id": "git-base",
+        "type": "module",
+        "group": "git",
+        "name": {
+          "en": "Git",
+          "tr": "Git"
+        },
+        "description": {
+          "en": "Commit, branch, diff, merge, rebase, conflicts, history, pull requests and reviews",
+          "tr": "Commit, branch, diff, merge, rebase, çakışmalar, geçmiş, pull request ve review"
+        },
+        "latest": "0.1.0"
       }
     ]
   },
   "signatures": [
     {
       "keyid": "72f91e21d10b0178",
-      "sig": "ttBOseoQfx57Afdjq6v2QpaQ2H2GKCY4tHFzGo8ialI9aowxcF8z3HOQoyg8gwltnsRaJzFhMhy14ocFNKY1BA=="
+      "sig": "GfNDzmm9y7bSjx4+KiELwtVOEGFNMRavpzRTzykbP3KTfkS6ni2RtM2+pKj/85jFTXb7lUhQiqBTT07jxZ0rAQ=="
     }
   ]
 }
