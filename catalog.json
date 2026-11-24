@@ -2,8 +2,8 @@
   "signed": {
     "kind": "module-catalog",
     "schema": 1,
-    "sequence": 8,
-    "expires": "2027-03-24T11:35:37Z",
+    "sequence": 9,
+    "expires": "2027-03-24T11:38:15Z",
     "modules": [
       {
         "id": "docker",
@@ -48,6 +48,20 @@
         "latest": "0.1.0"
       },
       {
+        "id": "git-provider-bitbucket",
+        "type": "driver",
+        "group": "git",
+        "name": {
+          "en": "Bitbucket provider",
+          "tr": "Bitbucket sağlayıcısı"
+        },
+        "description": {
+          "en": "Bitbucket Cloud pull requests (list, create, merge) and repository list for Git Compass.",
+          "tr": "Git Compass için Bitbucket Cloud pull request'leri (listeleme, oluşturma, birleştirme) ve depo listesi."
+        },
+        "latest": "0.1.0"
+      },
+      {
         "id": "git-provider-github",
         "type": "driver",
         "group": "git",
@@ -80,7 +94,7 @@
   "signatures": [
     {
       "keyid": "72f91e21d10b0178",
-      "sig": "AEviQSTT8my4IPemHzEfLh7W8JSA+l2Vc8fnnDIRhsi3cimiC06s99DjTzaAr5/l3Jmnse+wq1K5X88fWuxwDQ=="
+      "sig": "5qOzOXFjs/Dc8rj/o3yc0zkAfI5lDePyuNhXq423JFSxcJy4KyUK9dhp7Js5iAZvqy6jFVDE7frL/Sr2lH/iBw=="
     }
   ]
 }

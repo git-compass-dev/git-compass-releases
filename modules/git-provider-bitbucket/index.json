@@ -1,0 +1,53 @@
+{
+  "signed": {
+    "kind": "module-index",
+    "schema": 1,
+    "id": "git-provider-bitbucket",
+    "sequence": 1,
+    "expires": "2027-03-24T11:38:15Z",
+    "latest": "0.1.0",
+    "versions": [
+      {
+        "version": "0.1.0",
+        "type": "driver",
+        "sdk": "^1.0",
+        "requires": {
+          "git-base": "\u003e=0.1.0"
+        },
+        "released": "2026-11-24T11:38:15Z",
+        "notes": {
+          "en": "First release: Bitbucket provider.",
+          "tr": "İlk sürüm: Bitbucket sağlayıcısı."
+        },
+        "files": {
+          "darwin/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/git-provider-bitbucket-v0.1.0/git-provider-bitbucket-0.1.0-darwin-amd64.zip",
+            "sha256": "731b19804281dde576bf6c3b7cad935305ccc0d3530f806a04bc81b4a950f7c4",
+            "size": 5093315
+          },
+          "darwin/arm64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/git-provider-bitbucket-v0.1.0/git-provider-bitbucket-0.1.0-darwin-arm64.zip",
+            "sha256": "91d99e82631674301e3c44752d31f8df53d6b661b63c3b3aea0954517f5938ea",
+            "size": 4794307
+          },
+          "linux/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/git-provider-bitbucket-v0.1.0/git-provider-bitbucket-0.1.0-linux-amd64.zip",
+            "sha256": "b04d3529cad773e47d315370f78c3c24d045efb56d113cf7f965bacd8dd0404f",
+            "size": 4959256
+          },
+          "windows/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/git-provider-bitbucket-v0.1.0/git-provider-bitbucket-0.1.0-windows-amd64.zip",
+            "sha256": "f0d167840fbe8f35a5b36e090b33582ee228716df92118b14fa6785414a331c4",
+            "size": 5126021
+          }
+        }
+      }
+    ]
+  },
+  "signatures": [
+    {
+      "keyid": "72f91e21d10b0178",
+      "sig": "mXo3KXC8gA9hUnQ8zkt14tLvyptFdSHeGPq8WNz/tkpgxJwJhExegLPLqZSCeH1AuxBepb/98Z5kn/okqk9+AQ=="
+    }
+  ]
+}
