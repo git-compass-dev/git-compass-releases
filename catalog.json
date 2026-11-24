@@ -2,8 +2,8 @@
   "signed": {
     "kind": "module-catalog",
     "schema": 1,
-    "sequence": 7,
-    "expires": "2027-03-24T11:33:20Z",
+    "sequence": 8,
+    "expires": "2027-03-24T11:35:37Z",
     "modules": [
       {
         "id": "docker",
@@ -30,6 +30,20 @@
         "description": {
           "en": "Commit, branch, diff, merge, rebase, conflicts, history, pull requests and reviews",
           "tr": "Commit, branch, diff, merge, rebase, çakışmalar, geçmiş, pull request ve review"
+        },
+        "latest": "0.1.0"
+      },
+      {
+        "id": "git-provider-azure",
+        "type": "driver",
+        "group": "git",
+        "name": {
+          "en": "Azure DevOps provider",
+          "tr": "Azure DevOps sağlayıcısı"
+        },
+        "description": {
+          "en": "Azure DevOps pull requests (list, create, merge) for Git Compass.",
+          "tr": "Git Compass için Azure DevOps pull request'leri (listeleme, oluşturma, birleştirme)."
         },
         "latest": "0.1.0"
       },
@@ -66,7 +80,7 @@
   "signatures": [
     {
       "keyid": "72f91e21d10b0178",
-      "sig": "S2sOPPQIGaJV2+R/1/3WgIToZyMc9wMGY1i11BAlY28wg/FZdcQm3Y5hWmOL2PM2gll92fO/qlzqPCKqx1I1CA=="
+      "sig": "AEviQSTT8my4IPemHzEfLh7W8JSA+l2Vc8fnnDIRhsi3cimiC06s99DjTzaAr5/l3Jmnse+wq1K5X88fWuxwDQ=="
     }
   ]
 }

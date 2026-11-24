@@ -1,0 +1,53 @@
+{
+  "signed": {
+    "kind": "module-index",
+    "schema": 1,
+    "id": "git-provider-azure",
+    "sequence": 1,
+    "expires": "2027-03-24T11:35:37Z",
+    "latest": "0.1.0",
+    "versions": [
+      {
+        "version": "0.1.0",
+        "type": "driver",
+        "sdk": "^1.0",
+        "requires": {
+          "git-base": "\u003e=0.1.0"
+        },
+        "released": "2026-11-24T11:35:37Z",
+        "notes": {
+          "en": "First release: Azure DevOps provider.",
+          "tr": "İlk sürüm: Azure DevOps sağlayıcısı."
+        },
+        "files": {
+          "darwin/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/git-provider-azure-v0.1.0/git-provider-azure-0.1.0-darwin-amd64.zip",
+            "sha256": "62f572c42d28236d0783ce394330f991874a575a8d2890e70157c87a10e9a491",
+            "size": 5093169
+          },
+          "darwin/arm64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/git-provider-azure-v0.1.0/git-provider-azure-0.1.0-darwin-arm64.zip",
+            "sha256": "38fc8a110c556b8edf27242d1eea714644dacf717747f0979faed833000b05b4",
+            "size": 4795195
+          },
+          "linux/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/git-provider-azure-v0.1.0/git-provider-azure-0.1.0-linux-amd64.zip",
+            "sha256": "fe2e433b5c09a88aa197dd2896f7f7862412ac5576845711776c708fe6898904",
+            "size": 4959286
+          },
+          "windows/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/git-provider-azure-v0.1.0/git-provider-azure-0.1.0-windows-amd64.zip",
+            "sha256": "271c42733a5bb3946c2471819556f940bfd29df6b4928ffc7816c429f5042cac",
+            "size": 5126304
+          }
+        }
+      }
+    ]
+  },
+  "signatures": [
+    {
+      "keyid": "72f91e21d10b0178",
+      "sig": "xCp9J/t6+g3dp2Ta0xHvjlbfh7r86wdVRwwY4Cx/J2EuJ3b5jgcTckJVtzSxoWditEt86PPBD4bWQRvRzHRWAw=="
+    }
+  ]
+}
