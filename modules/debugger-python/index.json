@@ -1,0 +1,53 @@
+{
+  "signed": {
+    "kind": "module-index",
+    "schema": 1,
+    "id": "debugger-python",
+    "sequence": 1,
+    "expires": "2027-03-24T12:21:30Z",
+    "latest": "1.0.0",
+    "versions": [
+      {
+        "version": "1.0.0",
+        "type": "module",
+        "sdk": "^1.0",
+        "requires": {
+          "debugger": "^1.0"
+        },
+        "released": "2026-11-24T12:21:30Z",
+        "notes": {
+          "en": "First release: Python language support (pylsp + debugpy).",
+          "tr": "İlk sürüm: Python dil desteği (pylsp + debugpy)."
+        },
+        "files": {
+          "darwin/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/debugger-python-v1.0.0/debugger-python-1.0.0-darwin-amd64.zip",
+            "sha256": "aa0793e43cdff55d470a11581ebc07c6a686f4c09db6718d28e95852ae7252b1",
+            "size": 5503395
+          },
+          "darwin/arm64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/debugger-python-v1.0.0/debugger-python-1.0.0-darwin-arm64.zip",
+            "sha256": "22381abcd79bb65b28d91d994702c66204ee4c525a8657e5863183be3f35f847",
+            "size": 5127806
+          },
+          "linux/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/debugger-python-v1.0.0/debugger-python-1.0.0-linux-amd64.zip",
+            "sha256": "c65b395ee98fddece8f991f4850fd00b0bca52cc196db513e93538421bb2cdef",
+            "size": 5392720
+          },
+          "windows/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/debugger-python-v1.0.0/debugger-python-1.0.0-windows-amd64.zip",
+            "sha256": "7d6de0ee64c4d4d9362bd06e6af8d27df2f6a5911e682b15f71a6f93b74b69e3",
+            "size": 5560464
+          }
+        }
+      }
+    ]
+  },
+  "signatures": [
+    {
+      "keyid": "72f91e21d10b0178",
+      "sig": "UhMSXHsPo+kxSqKDfzPjuAl/Vx1kiaOCWMF3XU2AAOq6C9fyI+RD++zJJOK/BaB6Ifmw9TfWXJbCIM9YkNpQAg=="
+    }
+  ]
+}
