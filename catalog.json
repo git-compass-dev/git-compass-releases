@@ -2,8 +2,8 @@
   "signed": {
     "kind": "module-catalog",
     "schema": 1,
-    "sequence": 24,
-    "expires": "2027-03-24T12:24:34Z",
+    "sequence": 25,
+    "expires": "2027-03-24T12:26:11Z",
     "modules": [
       {
         "id": "ai",
@@ -173,6 +173,20 @@
         "latest": "1.0.0"
       },
       {
+        "id": "debugger-rust",
+        "type": "module",
+        "group": "dev",
+        "name": {
+          "en": "Rust language",
+          "tr": "Rust dili"
+        },
+        "description": {
+          "en": "Rust language server and debugger for the editor and the Debug tab",
+          "tr": "Düzenleyici ve hata ayıklama sekmesi için Rust dil sunucusu ve hata ayıklayıcısı"
+        },
+        "latest": "1.0.0"
+      },
+      {
         "id": "docker",
         "type": "module",
         "group": "dev",
@@ -302,7 +316,7 @@
   "signatures": [
     {
       "keyid": "72f91e21d10b0178",
-      "sig": "UdN9qzYST4qKY8gesW/rgKkNC6sO0kjmnFIvbVFlB6iHgrPswzesFK0b7GJtENv4QYmh06xptnQxrihEfA90DA=="
+      "sig": "nB1um6Yi9B/ye81qBJrGzXpSGm2uvdcvmbBLSk6QFhvRXRM8Eoevko9aEkNfb3UAxAtCstdTmR9fjj8jjEYKBw=="
     }
   ]
 }

@@ -1,0 +1,53 @@
+{
+  "signed": {
+    "kind": "module-index",
+    "schema": 1,
+    "id": "debugger-rust",
+    "sequence": 1,
+    "expires": "2027-03-24T12:26:11Z",
+    "latest": "1.0.0",
+    "versions": [
+      {
+        "version": "1.0.0",
+        "type": "module",
+        "sdk": "^1.0",
+        "requires": {
+          "debugger": "^1.0"
+        },
+        "released": "2026-11-24T12:26:11Z",
+        "notes": {
+          "en": "First release: Rust language support (rust-analyzer + lldb-dap).",
+          "tr": "İlk sürüm: Rust dil desteği (rust-analyzer + lldb-dap)."
+        },
+        "files": {
+          "darwin/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/debugger-rust-v1.0.0/debugger-rust-1.0.0-darwin-amd64.zip",
+            "sha256": "74536b4ab8513abe31b0d8252dcdb053e40943afa9d26c03cd51158c202cd88e",
+            "size": 5505987
+          },
+          "darwin/arm64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/debugger-rust-v1.0.0/debugger-rust-1.0.0-darwin-arm64.zip",
+            "sha256": "828efedef7d46c66ff23259191d450ac9acbf62cf403eecccfc3803399d3dc6b",
+            "size": 5130816
+          },
+          "linux/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/debugger-rust-v1.0.0/debugger-rust-1.0.0-linux-amd64.zip",
+            "sha256": "d6f19fda301d1119503d32f983988640c5fb940ae1e07317845beb70caba8812",
+            "size": 5394683
+          },
+          "windows/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/debugger-rust-v1.0.0/debugger-rust-1.0.0-windows-amd64.zip",
+            "sha256": "cce31ca633590da74ca8e2789bd3e183cc01098828242926563ed2fe71d2e5eb",
+            "size": 5562066
+          }
+        }
+      }
+    ]
+  },
+  "signatures": [
+    {
+      "keyid": "72f91e21d10b0178",
+      "sig": "JNTexyeW9Pbgs0XlNxgiCu8wJP3Uh5LscAimuF6kySa1rNm9kEep3yPFntgPMn5MoN1c/n31Ph7YvPs+y9SkCw=="
+    }
+  ]
+}
