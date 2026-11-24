@@ -1,0 +1,30 @@
+{
+  "signed": {
+    "kind": "module-catalog",
+    "schema": 1,
+    "sequence": 1,
+    "expires": "2027-03-24T10:34:51Z",
+    "modules": [
+      {
+        "id": "docker",
+        "type": "module",
+        "group": "dev",
+        "name": {
+          "en": "Docker",
+          "tr": "Docker"
+        },
+        "description": {
+          "en": "Local Docker engine: containers grouped by compose project, images, volumes, logs and Docker Desktop start/stop.",
+          "tr": "Yerel Docker motoru: compose projesine göre gruplu container'lar, imajlar, volume'lar, loglar ve Docker Desktop başlat/durdur."
+        },
+        "latest": "0.1.0"
+      }
+    ]
+  },
+  "signatures": [
+    {
+      "keyid": "72f91e21d10b0178",
+      "sig": "VGbOA0ULn3Am1+ykylqjCf3JCV7iXSWsHLu5VMGARvvvo+r6B0/Lt9I3dxZ6o3GT9OigaCRXonH61hHV19YABA=="
+    }
+  ]
+}

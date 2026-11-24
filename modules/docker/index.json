@@ -1,0 +1,50 @@
+{
+  "signed": {
+    "kind": "module-index",
+    "schema": 1,
+    "id": "docker",
+    "sequence": 1,
+    "expires": "2027-03-24T10:34:51Z",
+    "latest": "0.1.0",
+    "versions": [
+      {
+        "version": "0.1.0",
+        "type": "module",
+        "sdk": "^1.0",
+        "released": "2026-11-24T10:34:51Z",
+        "notes": {
+          "en": "First release of the Docker module.",
+          "tr": "Docker modülünün ilk sürümü."
+        },
+        "files": {
+          "darwin/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/docker-v0.1.0/docker-0.1.0-darwin-amd64.zip",
+            "sha256": "8cde189aad814993eacb4d5a224d17c01b158940a0d6258f93fe54ac6470629b",
+            "size": 5178697
+          },
+          "darwin/arm64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/docker-v0.1.0/docker-0.1.0-darwin-arm64.zip",
+            "sha256": "b5ad49f983ced5f66deeee3690baf65241fd4c80cb4ef4577cd712a4f59a5171",
+            "size": 4822810
+          },
+          "linux/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/docker-v0.1.0/docker-0.1.0-linux-amd64.zip",
+            "sha256": "82707448042dd4d332b42321d54be3e5734d3418400bfc3ab7b1ab99b3dddcbd",
+            "size": 5069528
+          },
+          "windows/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/docker-v0.1.0/docker-0.1.0-windows-amd64.zip",
+            "sha256": "8bc609b6450ae052db05a598fdcbd1c970da7a60cef503f14d28f8752390cf8c",
+            "size": 5239751
+          }
+        }
+      }
+    ]
+  },
+  "signatures": [
+    {
+      "keyid": "72f91e21d10b0178",
+      "sig": "F9U2R4zbAsFIYKksdvH342msKjXmYsqMvoQ6ip6yzs/R08ttH3uA0aoApo1BmOb+Nkz0lcMy2ex7sL25oczVCw=="
+    }
+  ]
+}
