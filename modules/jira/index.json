@@ -3,10 +3,42 @@
     "kind": "module-index",
     "schema": 1,
     "id": "jira",
-    "sequence": 1,
-    "expires": "2027-03-24T15:23:31Z",
-    "latest": "0.1.0",
+    "sequence": 2,
+    "expires": "2027-03-24T20:30:11Z",
+    "latest": "0.2.0",
     "versions": [
+      {
+        "version": "0.2.0",
+        "type": "module",
+        "sdk": "^1.0",
+        "released": "2026-11-24T20:30:11Z",
+        "notes": {
+          "en": "Issue panel redesign: resizable panel, centred loading, clearer comment thread with avatars, your comments marked, status/assignee changes inline.",
+          "tr": "İş paneli yenilendi: yeniden boyutlanan panel, ortada yükleniyor göstergesi, avatarlı ve okunaklı yorum akışı, kendi yorumların işaretli, durum/atanan değişiklikleri akışta."
+        },
+        "files": {
+          "darwin/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/jira-v0.2.0/jira-0.2.0-darwin-amd64.zip",
+            "sha256": "ec88ba75b5fc24a765a8c047f4ac05eb139b8c2132ca7d0ad19673b8775419d4",
+            "size": 5189486
+          },
+          "darwin/arm64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/jira-v0.2.0/jira-0.2.0-darwin-arm64.zip",
+            "sha256": "f14f5e473e5eeb178249e82534e902f702184b71c1bdf44e2b7d68c48dfa81b4",
+            "size": 4834991
+          },
+          "linux/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/jira-v0.2.0/jira-0.2.0-linux-amd64.zip",
+            "sha256": "8d0918f8f817b7014e1177c6c8d1fdce938398a30758b0827efa76ded950f681",
+            "size": 5069025
+          },
+          "windows/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/jira-v0.2.0/jira-0.2.0-windows-amd64.zip",
+            "sha256": "aa3dbe48aa385baa3b9dfacd95007f26dad38c9f54f537809b3445f0d7af0a0b",
+            "size": 5229084
+          }
+        }
+      },
       {
         "version": "0.1.0",
         "type": "module",
@@ -44,7 +76,7 @@
   "signatures": [
     {
       "keyid": "72f91e21d10b0178",
-      "sig": "g7+bN+bAdObKrMM/UjHELUb8UGtHyYnWZ59/57edY+BebNAXOAwOvLaquR/M68cBPX4Ir75/7Kd4ZCDPk+B7Bg=="
+      "sig": "uzBQNzAntFh0w++csryo6MwXbvBGSXR2iVK7IRGATaSMBhiADI5qSKLsBF1YH/Wvkk8I6Ykj7P6DNjKMefXEAQ=="
     }
   ]
 }
