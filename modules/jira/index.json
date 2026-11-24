@@ -1,0 +1,50 @@
+{
+  "signed": {
+    "kind": "module-index",
+    "schema": 1,
+    "id": "jira",
+    "sequence": 1,
+    "expires": "2027-03-24T15:23:31Z",
+    "latest": "0.1.0",
+    "versions": [
+      {
+        "version": "0.1.0",
+        "type": "module",
+        "sdk": "^1.0",
+        "released": "2026-11-24T15:23:31Z",
+        "notes": {
+          "en": "First release: saved JQL queries as panels (table, list, count, distribution) on your own dashboards; several Jira Cloud and Data Center connections; space list and space picker; JQL editor with suggestions and test run; issue panel with git links. Read-only unless changes are allowed in settings.",
+          "tr": "İlk sürüm: kayıtlı JQL sorguları kendi panolarında panel olarak (tablo, liste, sayı, dağılım); birden fazla Jira Cloud ve Data Center bağlantısı; space listesi ve space seçici; önerili JQL editörü ve test; git bağlantılı issue paneli. Ayarlardan izin verilmedikçe salt okunur."
+        },
+        "files": {
+          "darwin/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/jira-v0.1.0/jira-0.1.0-darwin-amd64.zip",
+            "sha256": "2c29b89afe69781a9f9dbcbd1324e7235e91ba5b40c684f925be69270c9ee59a",
+            "size": 5181151
+          },
+          "darwin/arm64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/jira-v0.1.0/jira-0.1.0-darwin-arm64.zip",
+            "sha256": "b419c92a7dcebeb001cda0b432cdea43345b0d0cb0f608656e5b17a1705912ad",
+            "size": 4829746
+          },
+          "linux/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/jira-v0.1.0/jira-0.1.0-linux-amd64.zip",
+            "sha256": "3296b910ad4a2a2151b84330cfeae874ec91528494114353e46d663e65fe7d4c",
+            "size": 5064071
+          },
+          "windows/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/jira-v0.1.0/jira-0.1.0-windows-amd64.zip",
+            "sha256": "b948fff965247dd6f03cf1695eca0d685c3731d49a434589f6ab7d28de20889c",
+            "size": 5224368
+          }
+        }
+      }
+    ]
+  },
+  "signatures": [
+    {
+      "keyid": "72f91e21d10b0178",
+      "sig": "g7+bN+bAdObKrMM/UjHELUb8UGtHyYnWZ59/57edY+BebNAXOAwOvLaquR/M68cBPX4Ir75/7Kd4ZCDPk+B7Bg=="
+    }
+  ]
+}
