@@ -3,10 +3,42 @@
     "kind": "module-index",
     "schema": 1,
     "id": "ai",
-    "sequence": 1,
-    "expires": "2027-03-24T11:52:58Z",
-    "latest": "0.1.0",
+    "sequence": 2,
+    "expires": "2027-03-24T13:28:44Z",
+    "latest": "0.1.1",
     "versions": [
+      {
+        "version": "0.1.1",
+        "type": "module",
+        "sdk": "^1.0",
+        "released": "2026-11-24T13:28:44Z",
+        "notes": {
+          "en": "AI chat and flows find claude / cursor-agent when the app is launched from Finder/Dock, and show an install hint when they are missing.",
+          "tr": "AI sohbet ve akışlar, uygulama Finder/Dock'tan açıldığında da claude / cursor-agent'ı bulur; bulunamazsa kurulum ipucu gösterir."
+        },
+        "files": {
+          "darwin/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/ai-v0.1.1/ai-0.1.1-darwin-amd64.zip",
+            "sha256": "e8454095c88a2cd85029a767a6b23ff916c0c93a55f9cd449b882f792a6b2875",
+            "size": 5547752
+          },
+          "darwin/arm64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/ai-v0.1.1/ai-0.1.1-darwin-arm64.zip",
+            "sha256": "bd53d6c9549421941075587f8e886996cc6f93bf27516d43952df47a85346362",
+            "size": 5181105
+          },
+          "linux/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/ai-v0.1.1/ai-0.1.1-linux-amd64.zip",
+            "sha256": "88b5a78a7e020713b444db58c3f5e88bf8e9f6ac90b3df8e4bede30f90765bb4",
+            "size": 5437359
+          },
+          "windows/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/ai-v0.1.1/ai-0.1.1-windows-amd64.zip",
+            "sha256": "95d4702b75ef25cabf6d08e09885eb55a447767db07cc2c98ee40878ef31a95a",
+            "size": 5614185
+          }
+        }
+      },
       {
         "version": "0.1.0",
         "type": "module",
@@ -44,7 +76,7 @@
   "signatures": [
     {
       "keyid": "72f91e21d10b0178",
-      "sig": "DJiN3qzLX4OOc0B9/GdMGyA9yCNSe173rOxRRwtU5TEh4lK1UQTlqKU7lIpGUtvKhssB0wRn3SAF9qHI8eoYAg=="
+      "sig": "5lO9BhA3PBd0DOgX4zNvZYTFPnqKymklCdh3d2mTDvAX8iTpIN7hJHMuQ7hZW5woydY5ejhaUt/w4slNAQi6CQ=="
     }
   ]
 }
