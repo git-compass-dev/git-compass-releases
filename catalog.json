@@ -2,8 +2,8 @@
   "signed": {
     "kind": "module-catalog",
     "schema": 1,
-    "sequence": 28,
-    "expires": "2027-03-24T13:39:19Z",
+    "sequence": 29,
+    "expires": "2027-03-24T14:23:35Z",
     "modules": [
       {
         "id": "ai",
@@ -17,7 +17,7 @@
           "en": "Agent chat, AI terminals, agent flows and Claude commands.",
           "tr": "Ajan sohbeti, AI terminalleri, ajan akışları ve Claude komutları."
         },
-        "latest": "0.1.1"
+        "latest": "0.2.0"
       },
       {
         "id": "dark",
@@ -316,7 +316,7 @@
   "signatures": [
     {
       "keyid": "72f91e21d10b0178",
-      "sig": "Y7t+mV03Pix1Hi7e5oxt9S+MyrFYMwi6umbluy4f6wdT1thTGzUwVekbiDuw2gacfI8k5pz8rQTr+Ig2uMeKCw=="
+      "sig": "77BNMFg7eAY353bomye1ktmbWYhl0EwQ9lm14U/j3JWc5ZKts3/ofQPnvxbV8QSpYwtv4zt8xRm6ewVGQtxDAQ=="
     }
   ]
 }

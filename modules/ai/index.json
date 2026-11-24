@@ -3,10 +3,42 @@
     "kind": "module-index",
     "schema": 1,
     "id": "ai",
-    "sequence": 2,
-    "expires": "2027-03-24T13:28:44Z",
-    "latest": "0.1.1",
+    "sequence": 3,
+    "expires": "2027-03-24T14:23:35Z",
+    "latest": "0.2.0",
     "versions": [
+      {
+        "version": "0.2.0",
+        "type": "module",
+        "sdk": "^1.0",
+        "released": "2026-11-24T14:23:35Z",
+        "notes": {
+          "en": "AI Chat: subagent runs shown as nested sub-conversations; copy, edit \u0026 resend, rewind to here (optional file restore) and fork from here on messages (Claude Code).",
+          "tr": "AI Sohbet: alt ajan çalışmaları iç içe alt sohbet olarak görünür; mesajlarda kopyala, düzenle ve tekrar gönder, buraya geri sar (isteğe bağlı dosya geri alma) ve buradan fork et (Claude Code)."
+        },
+        "files": {
+          "darwin/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/ai-v0.2.0/ai-0.2.0-darwin-amd64.zip",
+            "sha256": "78fbb799ec067978c1fb7d2d099f099696c42563037c68551abc572e904b330a",
+            "size": 5562022
+          },
+          "darwin/arm64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/ai-v0.2.0/ai-0.2.0-darwin-arm64.zip",
+            "sha256": "7c84d8e457a41a85945d4887d6a442e3719b596192292e05a10390bf6ff03c30",
+            "size": 5196292
+          },
+          "linux/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/ai-v0.2.0/ai-0.2.0-linux-amd64.zip",
+            "sha256": "b37ee240418e4cb3d8dc21634e169d8e0f52db37d50b20c28fb5e6cabc7a75f9",
+            "size": 5450709
+          },
+          "windows/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/ai-v0.2.0/ai-0.2.0-windows-amd64.zip",
+            "sha256": "9fa88ecc73c796248384d32288ac1209c87c4cdfc243561c6787635d87c25283",
+            "size": 5628993
+          }
+        }
+      },
       {
         "version": "0.1.1",
         "type": "module",
@@ -76,7 +108,7 @@
   "signatures": [
     {
       "keyid": "72f91e21d10b0178",
-      "sig": "5lO9BhA3PBd0DOgX4zNvZYTFPnqKymklCdh3d2mTDvAX8iTpIN7hJHMuQ7hZW5woydY5ejhaUt/w4slNAQi6CQ=="
+      "sig": "Z3E01nZmDfQF78Q8XxMM4/sEWLurpH0LQbYfIYGJs5x68XlOINKlqJ9kqdzsnzw0Lxco8XaTQ+trTJJ1GjtCDA=="
     }
   ]
 }
