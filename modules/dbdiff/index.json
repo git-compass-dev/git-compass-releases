@@ -1,0 +1,53 @@
+{
+  "signed": {
+    "kind": "module-index",
+    "schema": 1,
+    "id": "dbdiff",
+    "sequence": 1,
+    "expires": "2027-03-24T11:48:23Z",
+    "latest": "1.0.0",
+    "versions": [
+      {
+        "version": "1.0.0",
+        "type": "module",
+        "sdk": "^1.0",
+        "requires": {
+          "db": "^1.0"
+        },
+        "released": "2026-11-24T11:48:23Z",
+        "notes": {
+          "en": "First release: schema and data diff between databases.",
+          "tr": "İlk sürüm: veritabanları arası şema ve veri karşılaştırma."
+        },
+        "files": {
+          "darwin/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/dbdiff-v1.0.0/dbdiff-1.0.0-darwin-amd64.zip",
+            "sha256": "e09b6b6f3e6ccc1516a3d8e3b728a7068c2801cba2e6e0060ef261eafd1fdfc5",
+            "size": 5125811
+          },
+          "darwin/arm64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/dbdiff-v1.0.0/dbdiff-1.0.0-darwin-arm64.zip",
+            "sha256": "4f6d4789ac05aedd161c5dc47a4dbb225f3d0e00d6afdc6e19b2fa6c4c0664b6",
+            "size": 4826299
+          },
+          "linux/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/dbdiff-v1.0.0/dbdiff-1.0.0-linux-amd64.zip",
+            "sha256": "ac8897727b34466b7e80eb4fe629d4c35caade8126b116207f0214b44d50d6cd",
+            "size": 4988717
+          },
+          "windows/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/dbdiff-v1.0.0/dbdiff-1.0.0-windows-amd64.zip",
+            "sha256": "8608833dfc6a6c3849558a6518d7ea4789850ec60d8ff400fd330c36bc863fdf",
+            "size": 5156601
+          }
+        }
+      }
+    ]
+  },
+  "signatures": [
+    {
+      "keyid": "72f91e21d10b0178",
+      "sig": "t+Mld7CxC72dq6Q1kLKmgxNPXPhKPYBl7mSmYa2ljR5hhTE5GnbqIOiy6u+Bdi6TzU9S46+bcokaS/AAHGAlAg=="
+    }
+  ]
+}

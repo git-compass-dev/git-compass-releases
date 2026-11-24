@@ -2,8 +2,8 @@
   "signed": {
     "kind": "module-catalog",
     "schema": 1,
-    "sequence": 12,
-    "expires": "2027-03-24T11:46:45Z",
+    "sequence": 13,
+    "expires": "2027-03-24T11:48:23Z",
     "modules": [
       {
         "id": "db",
@@ -44,6 +44,20 @@
         "description": {
           "en": "Redis driver and console for Databases: standalone and Cluster, key tree, commands, Pub/Sub, slow log, INFO.",
           "tr": "Veritabanları için Redis sürücüsü ve konsolu: tekil ve Cluster, anahtar ağacı, komutlar, Pub/Sub, slow log, INFO."
+        },
+        "latest": "1.0.0"
+      },
+      {
+        "id": "dbdiff",
+        "type": "module",
+        "group": "data",
+        "name": {
+          "en": "DB Diff",
+          "tr": "DB Diff"
+        },
+        "description": {
+          "en": "Compare database schemas between connections and snapshots, with saved analyses.",
+          "tr": "Bağlantılar ve anlık görüntüler arasında veritabanı şemalarını karşılaştırma, kayıtlı analizlerle."
         },
         "latest": "1.0.0"
       },
@@ -136,7 +150,7 @@
   "signatures": [
     {
       "keyid": "72f91e21d10b0178",
-      "sig": "Up6rJrvHYFZyyHhWCq0ilhp/KR8RWh9kNGf7MIo3rWVJ8GwX9OPAMQC/KWqiO/djXQFjIz3y+Z+QteeJhHEUAA=="
+      "sig": "t6aniX4DTl5t3kFfBPgMjQ04CUbLdk6DD4DazMywUcXPom/uQ14CWqDINZoUZXkxZeXuxeD8AcsG6S6Z+YKwBQ=="
     }
   ]
 }
