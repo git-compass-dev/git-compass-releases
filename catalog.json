@@ -2,8 +2,8 @@
   "signed": {
     "kind": "module-catalog",
     "schema": 1,
-    "sequence": 21,
-    "expires": "2027-03-24T12:15:26Z",
+    "sequence": 22,
+    "expires": "2027-03-24T12:18:19Z",
     "modules": [
       {
         "id": "ai",
@@ -127,6 +127,20 @@
         "description": {
           "en": "Java language server and debugger for the editor and the Debug tab",
           "tr": "Düzenleyici ve hata ayıklama sekmesi için Java dil sunucusu ve hata ayıklayıcısı"
+        },
+        "latest": "1.0.0"
+      },
+      {
+        "id": "debugger-js",
+        "type": "module",
+        "group": "dev",
+        "name": {
+          "en": "JavaScript / TypeScript language",
+          "tr": "JavaScript / TypeScript dili"
+        },
+        "description": {
+          "en": "JavaScript / TypeScript language server and debugger for the editor and the Debug tab",
+          "tr": "Düzenleyici ve hata ayıklama sekmesi için JavaScript / TypeScript dil sunucusu ve hata ayıklayıcısı"
         },
         "latest": "1.0.0"
       },
@@ -260,7 +274,7 @@
   "signatures": [
     {
       "keyid": "72f91e21d10b0178",
-      "sig": "G9iKnXk0QtiFloLN4ipJS4N/ub0a1duW3Uo/kWw/7KFYwKeV4J+ZIjHdsDpIBCalaRwyjuPZouo9VEO6OfwtAA=="
+      "sig": "r/GCjR1ASYoDigIAeOWsJOFLnFHxiA63e4mu+plXYcelKp8i+k/9X9IIxR19pHsRj3cZAa8K8DoKiqqFLvUFBQ=="
     }
   ]
 }

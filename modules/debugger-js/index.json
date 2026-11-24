@@ -1,0 +1,53 @@
+{
+  "signed": {
+    "kind": "module-index",
+    "schema": 1,
+    "id": "debugger-js",
+    "sequence": 1,
+    "expires": "2027-03-24T12:18:19Z",
+    "latest": "1.0.0",
+    "versions": [
+      {
+        "version": "1.0.0",
+        "type": "module",
+        "sdk": "^1.0",
+        "requires": {
+          "debugger": "^1.0"
+        },
+        "released": "2026-11-24T12:18:19Z",
+        "notes": {
+          "en": "First release: JavaScript/TypeScript support (TypeScript server + vscode-js-debug: Node, npm scripts, Chrome).",
+          "tr": "İlk sürüm: JavaScript/TypeScript desteği (TypeScript sunucusu + vscode-js-debug: Node, npm script, Chrome)."
+        },
+        "files": {
+          "darwin/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/debugger-js-v1.0.0/debugger-js-1.0.0-darwin-amd64.zip",
+            "sha256": "dc4ed5b21318870d2348c2800028a69321bd2ba89e14f237d31bb1f1fcb92f40",
+            "size": 5506515
+          },
+          "darwin/arm64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/debugger-js-v1.0.0/debugger-js-1.0.0-darwin-arm64.zip",
+            "sha256": "ed22a25b52c22bf7578dd8663ccb5d80c87930eba48038ef97270766a673ce79",
+            "size": 5132680
+          },
+          "linux/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/debugger-js-v1.0.0/debugger-js-1.0.0-linux-amd64.zip",
+            "sha256": "1a884955c225f8b69f91680f8656e9ecdb5ffa1bcdc79c1d9a4ef0ba6d1d9e9e",
+            "size": 5395958
+          },
+          "windows/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/debugger-js-v1.0.0/debugger-js-1.0.0-windows-amd64.zip",
+            "sha256": "042f98e8692be55c5ce8a46349c5ec7c7d3de6955f5ed8e7171f9b0c6f5aa3a0",
+            "size": 5563797
+          }
+        }
+      }
+    ]
+  },
+  "signatures": [
+    {
+      "keyid": "72f91e21d10b0178",
+      "sig": "xog9qs00pPtqoEA5sFiUTO/3pxhoT/muo1owEvhcI3Bupb74c7ep/dNpLuPK0mNIgn2A9H0faCKDXSaUy3TKBg=="
+    }
+  ]
+}
