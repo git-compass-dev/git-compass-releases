@@ -1,0 +1,53 @@
+{
+  "signed": {
+    "kind": "module-index",
+    "schema": 1,
+    "id": "git-provider-github",
+    "sequence": 1,
+    "expires": "2027-03-24T11:31:05Z",
+    "latest": "0.1.0",
+    "versions": [
+      {
+        "version": "0.1.0",
+        "type": "driver",
+        "sdk": "^1.0",
+        "requires": {
+          "git-base": "\u003e=0.1.0"
+        },
+        "released": "2026-11-24T11:31:05Z",
+        "notes": {
+          "en": "First release: GitHub provider (pull requests, reviews, checks).",
+          "tr": "İlk sürüm: GitHub sağlayıcısı (PR, inceleme, kontroller)."
+        },
+        "files": {
+          "darwin/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/git-provider-github-v0.1.0/git-provider-github-0.1.0-darwin-amd64.zip",
+            "sha256": "704659048350cad10dc753c8908b7c0cfd47fc767b266fa1ad1273619b3b08c0",
+            "size": 5122387
+          },
+          "darwin/arm64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/git-provider-github-v0.1.0/git-provider-github-0.1.0-darwin-arm64.zip",
+            "sha256": "fae5bb038ffc3439a595875f4a8c65f5da5b9bd9a5f53a8503a0a0a23f8f5354",
+            "size": 4819711
+          },
+          "linux/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/git-provider-github-v0.1.0/git-provider-github-0.1.0-linux-amd64.zip",
+            "sha256": "0914e423188cf7342ce7a5c9e602af9531aecd63d8aa63a530bf98a2c4b01903",
+            "size": 4986921
+          },
+          "windows/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/git-provider-github-v0.1.0/git-provider-github-0.1.0-windows-amd64.zip",
+            "sha256": "0d94ad41818d443795d28dc6aaaf4ede40c30aa5062da3752586976e384983c7",
+            "size": 5154496
+          }
+        }
+      }
+    ]
+  },
+  "signatures": [
+    {
+      "keyid": "72f91e21d10b0178",
+      "sig": "yZ0q5r5S0IuLFe3oRuPBCMq/PEiYqkNn0PiJxy6OzP2NkQI4y17cL9DiiOtF3JaHEB2SHyK+0wp+O4fYRedjBg=="
+    }
+  ]
+}

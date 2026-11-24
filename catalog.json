@@ -2,8 +2,8 @@
   "signed": {
     "kind": "module-catalog",
     "schema": 1,
-    "sequence": 5,
-    "expires": "2027-03-24T11:28:39Z",
+    "sequence": 6,
+    "expires": "2027-03-24T11:31:05Z",
     "modules": [
       {
         "id": "docker",
@@ -32,13 +32,27 @@
           "tr": "Commit, branch, diff, merge, rebase, çakışmalar, geçmiş, pull request ve review"
         },
         "latest": "0.1.0"
+      },
+      {
+        "id": "git-provider-github",
+        "type": "driver",
+        "group": "git",
+        "name": {
+          "en": "GitHub",
+          "tr": "GitHub"
+        },
+        "description": {
+          "en": "GitHub pull requests, reviews, Actions runs, issues, repositories and remote sync (github.com and GitHub Enterprise).",
+          "tr": "GitHub pull request, inceleme, Actions çalıştırmaları, issue, depo ve uzak senkronizasyon (github.com ve GitHub Enterprise)."
+        },
+        "latest": "0.1.0"
       }
     ]
   },
   "signatures": [
     {
       "keyid": "72f91e21d10b0178",
-      "sig": "GfNDzmm9y7bSjx4+KiELwtVOEGFNMRavpzRTzykbP3KTfkS6ni2RtM2+pKj/85jFTXb7lUhQiqBTT07jxZ0rAQ=="
+      "sig": "sqGrG8Bw/2XNEmayGfqN3LnWzbgFm/OxTAJIKc7aPNvmXs/x7UfdgLxZYJd54cWnRmcjI2xN4jPh9s9nquyqAQ=="
     }
   ]
 }
