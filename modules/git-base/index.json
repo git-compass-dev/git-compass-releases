@@ -3,10 +3,42 @@
     "kind": "module-index",
     "schema": 1,
     "id": "git-base",
-    "sequence": 1,
-    "expires": "2027-03-24T11:28:39Z",
-    "latest": "0.1.0",
+    "sequence": 2,
+    "expires": "2027-03-24T13:39:19Z",
+    "latest": "0.1.1",
     "versions": [
+      {
+        "version": "0.1.1",
+        "type": "module",
+        "sdk": "^1.0",
+        "released": "2026-11-24T13:39:19Z",
+        "notes": {
+          "en": "History table: columns fit the list width; headers no longer spill into the commit detail.",
+          "tr": "Geçmiş tablosu: kolonlar liste genişliğine sığar; başlıklar commit detayına taşmaz."
+        },
+        "files": {
+          "darwin/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/git-base-v0.1.1/git-base-0.1.1-darwin-amd64.zip",
+            "sha256": "db8b91cd28e2cbb54d3e517d5afe132e21a7429ad5d92cbad0f0f71c1cd47ff7",
+            "size": 5442096
+          },
+          "darwin/arm64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/git-base-v0.1.1/git-base-0.1.1-darwin-arm64.zip",
+            "sha256": "7832678156ad0e96f8d3d3711129b1ac17cf5a49683e1c2f0dc08ba04c483514",
+            "size": 5131533
+          },
+          "linux/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/git-base-v0.1.1/git-base-0.1.1-linux-amd64.zip",
+            "sha256": "955d0b9d0c19e143baa998451a4668ae0c87f992c5208fc8037cedd8b104667d",
+            "size": 5314052
+          },
+          "windows/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/git-base-v0.1.1/git-base-0.1.1-windows-amd64.zip",
+            "sha256": "0d25448fd883511affdac45d97d4a71675b9f8422c5ee0b00efeeca557db5c0e",
+            "size": 5491785
+          }
+        }
+      },
       {
         "version": "0.1.0",
         "type": "module",
@@ -44,7 +76,7 @@
   "signatures": [
     {
       "keyid": "72f91e21d10b0178",
-      "sig": "HUUsqgX8d8SnQbzE1iJ4TuSsoznUUAsGynf0KDMUB071E9zSPbJg+hyK+ybEub9mo8kQv4n6P12yl7ihCOo+DA=="
+      "sig": "eFkADKA+JUlAczwTPWmKMTR9/X6E461xOMTneSRW+fXn5oo98vsSL85v7XckUUpK+rrCfrS17gDHYJdQJKUvAQ=="
     }
   ]
 }

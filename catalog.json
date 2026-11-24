@@ -2,8 +2,8 @@
   "signed": {
     "kind": "module-catalog",
     "schema": 1,
-    "sequence": 27,
-    "expires": "2027-03-24T13:28:44Z",
+    "sequence": 28,
+    "expires": "2027-03-24T13:39:19Z",
     "modules": [
       {
         "id": "ai",
@@ -212,7 +212,7 @@
           "en": "Commit, branch, diff, merge, rebase, conflicts, history, pull requests and reviews",
           "tr": "Commit, branch, diff, merge, rebase, çakışmalar, geçmiş, pull request ve review"
         },
-        "latest": "0.1.0"
+        "latest": "0.1.1"
       },
       {
         "id": "git-provider-azure",
@@ -316,7 +316,7 @@
   "signatures": [
     {
       "keyid": "72f91e21d10b0178",
-      "sig": "2cUi+2eMYG31dURc/0ZWHGvcvMQGoAVrvtYbWrvD6B8dQIS0iRYjwZcrM89T9ur6YDjKoartjf0DhvdXQ8IfDg=="
+      "sig": "Y7t+mV03Pix1Hi7e5oxt9S+MyrFYMwi6umbluy4f6wdT1thTGzUwVekbiDuw2gacfI8k5pz8rQTr+Ig2uMeKCw=="
     }
   ]
 }
