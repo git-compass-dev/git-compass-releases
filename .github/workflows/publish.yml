@@ -55,14 +55,20 @@ jobs:
           token: ${{ secrets.GC_READ_TOKEN }}
           path: src
           persist-credentials: false
+      - name: Go version
+        id: gover
+        # Theme packages have no Go code: use this repo's Go then.
+        run: |
+          if [ -f src/go.mod ]; then echo "file=src/go.mod" >> "$GITHUB_OUTPUT"; else echo "file=go.mod" >> "$GITHUB_OUTPUT"; fi
       - uses: actions/setup-go@v7
         with:
-          go-version-file: src/go.mod
+          go-version-file: ${{ steps.gover.outputs.file }}
           cache: false
       - uses: actions/setup-node@v7
         with:
           node-version: '22'
       - name: Test the module
+        if: hashFiles('src/go.mod') != ''
         working-directory: src
         run: go test ./...
       - name: Build every platform
