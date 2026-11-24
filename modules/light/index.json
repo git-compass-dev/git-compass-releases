@@ -1,0 +1,35 @@
+{
+  "signed": {
+    "kind": "module-index",
+    "schema": 1,
+    "id": "light",
+    "sequence": 1,
+    "expires": "2027-03-24T11:55:13Z",
+    "latest": "1.0.0",
+    "versions": [
+      {
+        "version": "1.0.0",
+        "type": "theme",
+        "app": "\u003e=2.0.0",
+        "released": "2026-11-24T11:55:13Z",
+        "notes": {
+          "en": "Light theme.",
+          "tr": "Açık tema."
+        },
+        "files": {
+          "any": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/light-v1.0.0/light-1.0.0-any.zip",
+            "sha256": "c01013c546ede541c6cc17aa18cdb9a3a66835dbd35f6b3976e7b6417ded4cf4",
+            "size": 1518
+          }
+        }
+      }
+    ]
+  },
+  "signatures": [
+    {
+      "keyid": "72f91e21d10b0178",
+      "sig": "qAWWoUjPfRpa0FXtvmp9HY2YQ2fpn5+XBTlDIAuFRz9BcA/Wp+hGmYyAwjGvBoAYC96cTZRM5HoPMIIFbrAXCQ=="
+    }
+  ]
+}

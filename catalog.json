@@ -2,8 +2,8 @@
   "signed": {
     "kind": "module-catalog",
     "schema": 1,
-    "sequence": 16,
-    "expires": "2027-03-24T11:54:08Z",
+    "sequence": 17,
+    "expires": "2027-03-24T11:55:13Z",
     "modules": [
       {
         "id": "ai",
@@ -185,13 +185,26 @@
           "tr": "Salt okunur küme görüntüleyici: kubie context'leri, namespace'ler, pod'lar ve loglar. AI özellikleri hiç göremez."
         },
         "latest": "0.1.0"
+      },
+      {
+        "id": "light",
+        "type": "theme",
+        "name": {
+          "en": "Light theme",
+          "tr": "Açık tema"
+        },
+        "description": {
+          "en": "The Light theme.",
+          "tr": "Açık tema."
+        },
+        "latest": "1.0.0"
       }
     ]
   },
   "signatures": [
     {
       "keyid": "72f91e21d10b0178",
-      "sig": "arLQJJ68I3gDRwKB+jQ4XfJMHLCFWeLXQ89My1xSOVmY9QtweIP125Kce5wlKdsznkIfGobXaSPYyKK/0xH6Cg=="
+      "sig": "NeCrbucj9tQTCEL1sofLSr/XZV3XSji2cosggeUdu6qS2fpyW+RlVDlB/IMyEu5gG94Esg1L9aoM/PsoGRIjDg=="
     }
   ]
 }
