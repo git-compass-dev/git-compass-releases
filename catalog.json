@@ -2,8 +2,8 @@
   "signed": {
     "kind": "module-catalog",
     "schema": 1,
-    "sequence": 18,
-    "expires": "2027-03-24T12:09:22Z",
+    "sequence": 19,
+    "expires": "2027-03-24T12:11:22Z",
     "modules": [
       {
         "id": "ai",
@@ -85,6 +85,20 @@
         "description": {
           "en": "Compare database schemas between connections and snapshots, with saved analyses.",
           "tr": "Bağlantılar ve anlık görüntüler arasında veritabanı şemalarını karşılaştırma, kayıtlı analizlerle."
+        },
+        "latest": "1.0.0"
+      },
+      {
+        "id": "debugger",
+        "type": "module",
+        "group": "dev",
+        "name": {
+          "en": "Debugger",
+          "tr": "Hata ayıklayıcı"
+        },
+        "description": {
+          "en": "Debug tab: breakpoints, stepping, variables, call stack and debug console",
+          "tr": "Hata ayıklama sekmesi: kesme noktaları, adım adım ilerleme, değişkenler, çağrı yığını ve konsol"
         },
         "latest": "1.0.0"
       },
@@ -218,7 +232,7 @@
   "signatures": [
     {
       "keyid": "72f91e21d10b0178",
-      "sig": "AqRp2xXmFRcGyMFsMUx0UQ7/HxN1RqO2K91nzqNGqWqSPYfK8A/oejKN2vim37wDHmkQqpqi9MWerq7r4rIxBw=="
+      "sig": "p2ptWBK296Ezbd75w9+HvK+MFFT50Hq+qm3xlV5mni+NtEmHO5tTRkd811zIe2vSxTLLBE+lIHta6YaHoLxoDQ=="
     }
   ]
 }

@@ -1,0 +1,53 @@
+{
+  "signed": {
+    "kind": "module-index",
+    "schema": 1,
+    "id": "debugger",
+    "sequence": 1,
+    "expires": "2027-03-24T12:11:22Z",
+    "latest": "1.0.0",
+    "versions": [
+      {
+        "version": "1.0.0",
+        "type": "module",
+        "sdk": "^1.0",
+        "requires": {
+          "ide": "^1.0"
+        },
+        "released": "2026-11-24T12:11:22Z",
+        "notes": {
+          "en": "First release: Debug tab (breakpoints, stepping, variables, call stack, console).",
+          "tr": "İlk sürüm: Debug sekmesi (breakpoint, adım adım, değişkenler, çağrı yığını, konsol)."
+        },
+        "files": {
+          "darwin/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/debugger-v1.0.0/debugger-1.0.0-darwin-amd64.zip",
+            "sha256": "f3b0390a72bcea53eecd989b1d75dc596837dd9d252f791f6c0dbc9586f88789",
+            "size": 5239562
+          },
+          "darwin/arm64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/debugger-v1.0.0/debugger-1.0.0-darwin-arm64.zip",
+            "sha256": "5a4c3043ddc9fdbf5520f22360e4554c71c05c6cb19649c41e82a447a48f26d8",
+            "size": 4879190
+          },
+          "linux/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/debugger-v1.0.0/debugger-1.0.0-linux-amd64.zip",
+            "sha256": "80f0296034b027f284f9327791e9696ba173176bc3be623b9c50cd4a8f277408",
+            "size": 5136606
+          },
+          "windows/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/debugger-v1.0.0/debugger-1.0.0-windows-amd64.zip",
+            "sha256": "c50926f84eeebcf79fdf793faacc4ee6162548d5f0dac9a066f64870005a2dce",
+            "size": 5292841
+          }
+        }
+      }
+    ]
+  },
+  "signatures": [
+    {
+      "keyid": "72f91e21d10b0178",
+      "sig": "DZ561z02+m8baniFA6tvHLRhpYZL/AnKejZrQQL0HoatOHu6ocpxHwnEhxFkcKmm0+9CO2LkSIure9Pddvz7Dw=="
+    }
+  ]
+}
