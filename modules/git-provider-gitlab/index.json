@@ -1,0 +1,53 @@
+{
+  "signed": {
+    "kind": "module-index",
+    "schema": 1,
+    "id": "git-provider-gitlab",
+    "sequence": 1,
+    "expires": "2027-03-24T11:33:20Z",
+    "latest": "0.1.0",
+    "versions": [
+      {
+        "version": "0.1.0",
+        "type": "driver",
+        "sdk": "^1.0",
+        "requires": {
+          "git-base": "\u003e=0.1.0"
+        },
+        "released": "2026-11-24T11:33:20Z",
+        "notes": {
+          "en": "First release: GitLab provider (merge requests, pipelines; self-hosted too).",
+          "tr": "İlk sürüm: GitLab sağlayıcısı (MR, pipeline; self-hosted dahil)."
+        },
+        "files": {
+          "darwin/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/git-provider-gitlab-v0.1.0/git-provider-gitlab-0.1.0-darwin-amd64.zip",
+            "sha256": "0610bcdc3e5ffe6eb960b2b2e3a079845ac1d28dd86895e9194c12638e53981b",
+            "size": 5123144
+          },
+          "darwin/arm64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/git-provider-gitlab-v0.1.0/git-provider-gitlab-0.1.0-darwin-arm64.zip",
+            "sha256": "988ac17ec2b4242b38d75fa0678bfdb7d8d3d9f6ff843f5980629797e33bc9ef",
+            "size": 4821882
+          },
+          "linux/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/git-provider-gitlab-v0.1.0/git-provider-gitlab-0.1.0-linux-amd64.zip",
+            "sha256": "0700d07e1310fe10362d5d368e0ddcebc70e73e45ba05ee9d1a546f52222d946",
+            "size": 4987861
+          },
+          "windows/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/git-provider-gitlab-v0.1.0/git-provider-gitlab-0.1.0-windows-amd64.zip",
+            "sha256": "804695464201b2019ea0bb2fcbb2fe29240efb487c421c3ef4b8917b8b882d2f",
+            "size": 5155291
+          }
+        }
+      }
+    ]
+  },
+  "signatures": [
+    {
+      "keyid": "72f91e21d10b0178",
+      "sig": "TXNWfGln4unTlEdZmyIHxQprXQoiwhi0036B2R+XH0ihTx6/xtTf5txjhPyQpUPnVyTCHLFob4jRkMEeY/w1DA=="
+    }
+  ]
+}

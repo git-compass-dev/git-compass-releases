@@ -2,8 +2,8 @@
   "signed": {
     "kind": "module-catalog",
     "schema": 1,
-    "sequence": 6,
-    "expires": "2027-03-24T11:31:05Z",
+    "sequence": 7,
+    "expires": "2027-03-24T11:33:20Z",
     "modules": [
       {
         "id": "docker",
@@ -46,13 +46,27 @@
           "tr": "GitHub pull request, inceleme, Actions çalıştırmaları, issue, depo ve uzak senkronizasyon (github.com ve GitHub Enterprise)."
         },
         "latest": "0.1.0"
+      },
+      {
+        "id": "git-provider-gitlab",
+        "type": "driver",
+        "group": "git",
+        "name": {
+          "en": "GitLab",
+          "tr": "GitLab"
+        },
+        "description": {
+          "en": "GitLab merge requests, reviews, pipelines, issues, projects and remote sync (gitlab.com and self-hosted GitLab).",
+          "tr": "GitLab merge request, inceleme, pipeline, issue, proje ve uzak senkronizasyon (gitlab.com ve kendi sunucunuzdaki GitLab)."
+        },
+        "latest": "0.1.0"
       }
     ]
   },
   "signatures": [
     {
       "keyid": "72f91e21d10b0178",
-      "sig": "sqGrG8Bw/2XNEmayGfqN3LnWzbgFm/OxTAJIKc7aPNvmXs/x7UfdgLxZYJd54cWnRmcjI2xN4jPh9s9nquyqAQ=="
+      "sig": "S2sOPPQIGaJV2+R/1/3WgIToZyMc9wMGY1i11BAlY28wg/FZdcQm3Y5hWmOL2PM2gll92fO/qlzqPCKqx1I1CA=="
     }
   ]
 }
