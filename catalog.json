@@ -2,8 +2,8 @@
   "signed": {
     "kind": "module-catalog",
     "schema": 1,
-    "sequence": 2,
-    "expires": "2027-03-24T10:37:58Z",
+    "sequence": 3,
+    "expires": "2027-03-24T10:40:21Z",
     "modules": [
       {
         "id": "docker",
@@ -24,7 +24,7 @@
   "signatures": [
     {
       "keyid": "72f91e21d10b0178",
-      "sig": "3QKLAgmtq4HWuioo9H7y15bqd4Y0VTEHlc4/FBtBbmqjJOdhmDT7Oq4znpn8q2YU4VIOhfiRhzQVJCaFm9ZtCA=="
+      "sig": "qygl0/NfvZ0EdZEiMekSfsUvrd9YQoWe758T8C8/XEjIo8163qKX+dpu99LB3RNe8aBk/MPtQ19s9nrNF8mkBg=="
     }
   ]
 }

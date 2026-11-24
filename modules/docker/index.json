@@ -3,8 +3,8 @@
     "kind": "module-index",
     "schema": 1,
     "id": "docker",
-    "sequence": 2,
-    "expires": "2027-03-24T10:37:58Z",
+    "sequence": 3,
+    "expires": "2027-03-24T10:40:21Z",
     "latest": "0.2.0",
     "versions": [
       {
@@ -48,6 +48,8 @@
           "en": "First release of the Docker module.",
           "tr": "Docker modülünün ilk sürümü."
         },
+        "revoked": true,
+        "revokedReason": "pipeline test",
         "files": {
           "darwin/amd64": {
             "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/docker-v0.1.0/docker-0.1.0-darwin-amd64.zip",
@@ -76,7 +78,7 @@
   "signatures": [
     {
       "keyid": "72f91e21d10b0178",
-      "sig": "JD2v5mW2kjDOGQtwWGIZR3RDx/RpADILJBQTHtETlgSQE2Ba7HUbpR0XCDYfkeeSJUlEyLZ64QsXg8wdiZ+rAQ=="
+      "sig": "W+cFneLaAFTd6aJ9PyA8XMtQ6f3HYGLROV4UN3xmnPqT0NQFJ+MEofwK0ZBOhC2bQ/SH/IT7KjRj/1GW6ufaCA=="
     }
   ]
 }
