@@ -3,10 +3,42 @@
     "kind": "module-index",
     "schema": 1,
     "id": "db",
-    "sequence": 1,
-    "expires": "2027-03-24T11:41:36Z",
-    "latest": "1.0.0",
+    "sequence": 2,
+    "expires": "2027-03-24T13:11:16Z",
+    "latest": "1.0.1",
     "versions": [
+      {
+        "version": "1.0.1",
+        "type": "module",
+        "sdk": "^1.0",
+        "released": "2026-11-24T13:11:16Z",
+        "notes": {
+          "en": "The SQL console (query editor, result grid, sessions) is now shown by default; it was hidden behind the Beta switch.",
+          "tr": "SQL konsolu (sorgu editörü, sonuç tablosu, oturumlar) artık varsayılan olarak açık; önceden Beta anahtarının arkasındaydı."
+        },
+        "files": {
+          "darwin/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/db-v1.0.1/db-1.0.1-darwin-amd64.zip",
+            "sha256": "bd086b77afd4b883d2cd78f11267ecdc9b33febda10265c3cfbd26345723863a",
+            "size": 10104117
+          },
+          "darwin/arm64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/db-v1.0.1/db-1.0.1-darwin-arm64.zip",
+            "sha256": "591b7d6764aa10681cd5f4ac5eb0f033b8b6112fb645f78deae80450645fd351",
+            "size": 9785986
+          },
+          "linux/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/db-v1.0.1/db-1.0.1-linux-amd64.zip",
+            "sha256": "70e041854b680c4ecbfb965f1129cff3ca06b801e1b0f0a7cbb15f05620d6bba",
+            "size": 10117562
+          },
+          "windows/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/db-v1.0.1/db-1.0.1-windows-amd64.zip",
+            "sha256": "f7fefc041fd2d55b6d19e5905431058abf2f3ebd34d8bc10029e7c37b8230ff8",
+            "size": 10099731
+          }
+        }
+      },
       {
         "version": "1.0.0",
         "type": "module",
@@ -44,7 +76,7 @@
   "signatures": [
     {
       "keyid": "72f91e21d10b0178",
-      "sig": "Uv5EJXVExWD0a0KaxNl83fG1C6KlxugTKwIRB5CMI1WQq5QRsLUbOuutykNOg1Ij3PCb1DJOfvnW3fHAYkNSCw=="
+      "sig": "x34u7HODv3gCPnCHa3hNUqv8sMse4EYEg+TfXsIE4wPifRDnK2Bswi8TYQHINe6TvZh5rEGowp1HTcw4k1e6BQ=="
     }
   ]
 }
