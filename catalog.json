@@ -2,8 +2,8 @@
   "signed": {
     "kind": "module-catalog",
     "schema": 1,
-    "sequence": 20,
-    "expires": "2027-03-24T12:13:18Z",
+    "sequence": 21,
+    "expires": "2027-03-24T12:15:26Z",
     "modules": [
       {
         "id": "ai",
@@ -113,6 +113,20 @@
         "description": {
           "en": "Go language server and debugger for the editor and the Debug tab",
           "tr": "Düzenleyici ve hata ayıklama sekmesi için Go dil sunucusu ve hata ayıklayıcısı"
+        },
+        "latest": "1.0.0"
+      },
+      {
+        "id": "debugger-java",
+        "type": "module",
+        "group": "dev",
+        "name": {
+          "en": "Java language",
+          "tr": "Java dili"
+        },
+        "description": {
+          "en": "Java language server and debugger for the editor and the Debug tab",
+          "tr": "Düzenleyici ve hata ayıklama sekmesi için Java dil sunucusu ve hata ayıklayıcısı"
         },
         "latest": "1.0.0"
       },
@@ -246,7 +260,7 @@
   "signatures": [
     {
       "keyid": "72f91e21d10b0178",
-      "sig": "9O6KX2+hb1I6rGOo1MmyrUsv1F1Ux3n9ViQA0ikDA+AI5/bALkOxb+y5ReWQ4VFQQ6h+DCwm8wwn2yElLoxAAg=="
+      "sig": "G9iKnXk0QtiFloLN4ipJS4N/ub0a1duW3Uo/kWw/7KFYwKeV4J+ZIjHdsDpIBCalaRwyjuPZouo9VEO6OfwtAA=="
     }
   ]
 }
