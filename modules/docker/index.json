@@ -3,10 +3,42 @@
     "kind": "module-index",
     "schema": 1,
     "id": "docker",
-    "sequence": 1,
-    "expires": "2027-03-24T10:34:51Z",
-    "latest": "0.1.0",
+    "sequence": 2,
+    "expires": "2027-03-24T10:37:58Z",
+    "latest": "0.2.0",
     "versions": [
+      {
+        "version": "0.2.0",
+        "type": "module",
+        "sdk": "^1.0",
+        "released": "2026-11-24T10:37:58Z",
+        "notes": {
+          "en": "Second release (version check).",
+          "tr": "İkinci sürüm (sürüm geçişi denemesi)."
+        },
+        "files": {
+          "darwin/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/docker-v0.2.0/docker-0.2.0-darwin-amd64.zip",
+            "sha256": "3f5018e11e401f69228204b117b5c22dd8c86f0e445073cd29c9f8e045a0e8c8",
+            "size": 5178693
+          },
+          "darwin/arm64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/docker-v0.2.0/docker-0.2.0-darwin-arm64.zip",
+            "sha256": "186b07780f5741e5e83b009231b267bd0cdf75385d3132a17906fb9055e56b1f",
+            "size": 4822817
+          },
+          "linux/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/docker-v0.2.0/docker-0.2.0-linux-amd64.zip",
+            "sha256": "d22946a06c5d2f007e5c024d931014a45e7218dba5da4cfebc8c9cf2e431f0c0",
+            "size": 5069526
+          },
+          "windows/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/docker-v0.2.0/docker-0.2.0-windows-amd64.zip",
+            "sha256": "2caf0318dcc663d755775c006aa3f743502aa8eee86269c370cd0ad30f7eacff",
+            "size": 5239753
+          }
+        }
+      },
       {
         "version": "0.1.0",
         "type": "module",
@@ -44,7 +76,7 @@
   "signatures": [
     {
       "keyid": "72f91e21d10b0178",
-      "sig": "F9U2R4zbAsFIYKksdvH342msKjXmYsqMvoQ6ip6yzs/R08ttH3uA0aoApo1BmOb+Nkz0lcMy2ex7sL25oczVCw=="
+      "sig": "JD2v5mW2kjDOGQtwWGIZR3RDx/RpADILJBQTHtETlgSQE2Ba7HUbpR0XCDYfkeeSJUlEyLZ64QsXg8wdiZ+rAQ=="
     }
   ]
 }
