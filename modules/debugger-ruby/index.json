@@ -1,0 +1,53 @@
+{
+  "signed": {
+    "kind": "module-index",
+    "schema": 1,
+    "id": "debugger-ruby",
+    "sequence": 1,
+    "expires": "2027-03-24T12:24:34Z",
+    "latest": "1.0.0",
+    "versions": [
+      {
+        "version": "1.0.0",
+        "type": "module",
+        "sdk": "^1.0",
+        "requires": {
+          "debugger": "^1.0"
+        },
+        "released": "2026-11-24T12:24:34Z",
+        "notes": {
+          "en": "First release: Ruby language support (ruby-lsp + rdbg).",
+          "tr": "İlk sürüm: Ruby dil desteği (ruby-lsp + rdbg)."
+        },
+        "files": {
+          "darwin/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/debugger-ruby-v1.0.0/debugger-ruby-1.0.0-darwin-amd64.zip",
+            "sha256": "419a2b27fb97273724f18d1ccbb07411d0aed92908796c5cfe1aa7e85b30ca75",
+            "size": 5471129
+          },
+          "darwin/arm64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/debugger-ruby-v1.0.0/debugger-ruby-1.0.0-darwin-arm64.zip",
+            "sha256": "fbea3aa6ced428fee6795879c03f7d6322330a891ca23793e4fdda709c5927b4",
+            "size": 5098572
+          },
+          "linux/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/debugger-ruby-v1.0.0/debugger-ruby-1.0.0-linux-amd64.zip",
+            "sha256": "56bef0d942727ffc24d4be980c685171f86ead2305dd201748fcb7f962cfa420",
+            "size": 5351602
+          },
+          "windows/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/debugger-ruby-v1.0.0/debugger-ruby-1.0.0-windows-amd64.zip",
+            "sha256": "dff75a22c44db04f2e98594f2656965c051549e097fc53e6733d2a470c31df42",
+            "size": 5517175
+          }
+        }
+      }
+    ]
+  },
+  "signatures": [
+    {
+      "keyid": "72f91e21d10b0178",
+      "sig": "CwVNCGh1Cz/L593K640z4VoHlr5kiOirGqkpIoTK06SGxoXg2GRyz1UTL11nSDQ9eaXGvuk5Wk697wAgDPvqBQ=="
+    }
+  ]
+}

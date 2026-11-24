@@ -2,8 +2,8 @@
   "signed": {
     "kind": "module-catalog",
     "schema": 1,
-    "sequence": 23,
-    "expires": "2027-03-24T12:21:30Z",
+    "sequence": 24,
+    "expires": "2027-03-24T12:24:34Z",
     "modules": [
       {
         "id": "ai",
@@ -159,6 +159,20 @@
         "latest": "1.0.0"
       },
       {
+        "id": "debugger-ruby",
+        "type": "module",
+        "group": "dev",
+        "name": {
+          "en": "Ruby language",
+          "tr": "Ruby dili"
+        },
+        "description": {
+          "en": "Ruby language server and debugger for the editor and the Debug tab",
+          "tr": "Düzenleyici ve hata ayıklama sekmesi için Ruby dil sunucusu ve hata ayıklayıcısı"
+        },
+        "latest": "1.0.0"
+      },
+      {
         "id": "docker",
         "type": "module",
         "group": "dev",
@@ -288,7 +302,7 @@
   "signatures": [
     {
       "keyid": "72f91e21d10b0178",
-      "sig": "6kCx0739pMYaHXsgK0FhtNkl5s//KAHAopqbAsTQ0xdmd2mIoYYDPRZa1k7vg+2fUY4R6BjXQjQpkqHWgSJ8AA=="
+      "sig": "UdN9qzYST4qKY8gesW/rgKkNC6sO0kjmnFIvbVFlB6iHgrPswzesFK0b7GJtENv4QYmh06xptnQxrihEfA90DA=="
     }
   ]
 }
