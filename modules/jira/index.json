@@ -3,10 +3,42 @@
     "kind": "module-index",
     "schema": 1,
     "id": "jira",
-    "sequence": 4,
-    "expires": "2027-03-24T20:53:25Z",
-    "latest": "0.4.0",
+    "sequence": 5,
+    "expires": "2027-03-24T21:01:35Z",
+    "latest": "0.5.0",
     "versions": [
+      {
+        "version": "0.5.0",
+        "type": "module",
+        "sdk": "^1.0",
+        "released": "2026-11-24T21:01:35Z",
+        "notes": {
+          "en": "Cmd/Ctrl+F finds text on the Jira page (dashboard, issue description and comments) with highlighted matches.",
+          "tr": "Cmd/Ctrl+F ile Jira sayfasında (pano, iş açıklaması ve yorumlar) arama; eşleşmeler vurgulanır."
+        },
+        "files": {
+          "darwin/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/jira-v0.5.0/jira-0.5.0-darwin-amd64.zip",
+            "sha256": "c141accd95e65a34b3bce8e865d3e8c6ac77322c1d1c165b203b97fe73ff4595",
+            "size": 5205796
+          },
+          "darwin/arm64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/jira-v0.5.0/jira-0.5.0-darwin-arm64.zip",
+            "sha256": "2e23cf8e7f4eb53e06ebf1723645af1b16b430546197a7478f9da14c489bf79d",
+            "size": 4852234
+          },
+          "linux/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/jira-v0.5.0/jira-0.5.0-linux-amd64.zip",
+            "sha256": "d33baa6b4b8dfe80b9a4dccf3fdbd1e9f8f9cbe8a063d3d5b5fe80ac54e788fa",
+            "size": 5084677
+          },
+          "windows/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/jira-v0.5.0/jira-0.5.0-windows-amd64.zip",
+            "sha256": "dfde575a2d26d36a50df23bc22a88cf47cd0490bd2b5b70d406be20a85f29602",
+            "size": 5246869
+          }
+        }
+      },
       {
         "version": "0.4.0",
         "type": "module",
@@ -140,7 +172,7 @@
   "signatures": [
     {
       "keyid": "72f91e21d10b0178",
-      "sig": "u3PoCjLU2tkWb/et+Xz73yNd7myo6GkZXDhnrlsgIGUk9SaTw2J4TcRss9MGpNdP7s69KR5NuSja4wqg6E5HBQ=="
+      "sig": "ZllWJevSos4PS8pTqDS63gMFQevgWQsHwEFv2AvwlubxXwNikc3mLSoOdrvdZrm3TGRxn6duNJuecTgphWDKBw=="
     }
   ]
 }
