@@ -3,10 +3,42 @@
     "kind": "module-index",
     "schema": 1,
     "id": "jira",
-    "sequence": 3,
-    "expires": "2027-03-24T20:43:14Z",
-    "latest": "0.3.0",
+    "sequence": 4,
+    "expires": "2027-03-24T20:53:25Z",
+    "latest": "0.4.0",
     "versions": [
+      {
+        "version": "0.4.0",
+        "type": "module",
+        "sdk": "^1.0",
+        "released": "2026-11-24T20:53:25Z",
+        "notes": {
+          "en": "Panels can be made taller or shorter: drag the bottom edge (double-click for automatic), or pick a height in the panel editor.",
+          "tr": "Panellerin yüksekliği ayarlanabilir: alt kenarı sürükle (çift tık: otomatik) ya da panel düzenleyicide yükseklik seç."
+        },
+        "files": {
+          "darwin/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/jira-v0.4.0/jira-0.4.0-darwin-amd64.zip",
+            "sha256": "5af0e8507b8c653acab478cd63e23325fc0e9452eba0d9c260133e99a1d600a5",
+            "size": 5203786
+          },
+          "darwin/arm64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/jira-v0.4.0/jira-0.4.0-darwin-arm64.zip",
+            "sha256": "b4ae927a07b2a3192bef5bd6fee087bff0bcdb1407726a835e650d716a12e697",
+            "size": 4850216
+          },
+          "linux/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/jira-v0.4.0/jira-0.4.0-linux-amd64.zip",
+            "sha256": "d1cf228df00a7c9a008184e3d4195804b57f11ccda514574f35c70f3ad17cc4d",
+            "size": 5082659
+          },
+          "windows/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/jira-v0.4.0/jira-0.4.0-windows-amd64.zip",
+            "sha256": "01d95b6593b6c5c4f482461355f7085b7c5d495f8a20697ca5cc871e5eef9cd6",
+            "size": 5244852
+          }
+        }
+      },
       {
         "version": "0.3.0",
         "type": "module",
@@ -108,7 +140,7 @@
   "signatures": [
     {
       "keyid": "72f91e21d10b0178",
-      "sig": "xm5+pkJiO8Nf7HsRDRSXA4kmgqOdIajOEgKGbsuku5jGTJ/qwSWs3b+ZLE4uWdF7c/2H/+pUz3Yru88TFqJpCg=="
+      "sig": "u3PoCjLU2tkWb/et+Xz73yNd7myo6GkZXDhnrlsgIGUk9SaTw2J4TcRss9MGpNdP7s69KR5NuSja4wqg6E5HBQ=="
     }
   ]
 }

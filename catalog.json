@@ -2,8 +2,8 @@
   "signed": {
     "kind": "module-catalog",
     "schema": 1,
-    "sequence": 32,
-    "expires": "2027-03-24T20:43:14Z",
+    "sequence": 33,
+    "expires": "2027-03-24T20:53:25Z",
     "modules": [
       {
         "id": "ai",
@@ -296,7 +296,7 @@
           "en": "Jira Cloud and Data Center: saved JQL queries as stacked panels on your own dashboards, a JQL editor with autocomplete and a space picker, issue details and links to branches and pull requests.",
           "tr": "Jira Cloud ve Data Center: kayıtlı JQL sorguları kendi dashboard'larında alt alta paneller olarak, otomatik tamamlamalı JQL editörü ve space seçici, issue detayı, branch ve PR bağlantıları."
         },
-        "latest": "0.3.0"
+        "latest": "0.4.0"
       },
       {
         "id": "kube",
@@ -330,7 +330,7 @@
   "signatures": [
     {
       "keyid": "72f91e21d10b0178",
-      "sig": "Cpj9Ku/sOQZ7saJpC8uK8yhwKP+3nuF6+61C+zeiZiuOq7nSx1FPi/VaDOlLpnn+YzTudDP9C3UI8A5n3UkTDg=="
+      "sig": "cgAeAPJW7LUo6Vt31caUQbYNwFDDq0KAvgZn1GfjNo+6sSqH+rp0Yyn3UCl19z1ETixi/+xAwDYP3Vu6t64QBg=="
     }
   ]
 }
