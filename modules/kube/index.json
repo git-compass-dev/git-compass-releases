@@ -1,0 +1,50 @@
+{
+  "signed": {
+    "kind": "module-index",
+    "schema": 1,
+    "id": "kube",
+    "sequence": 1,
+    "expires": "2027-03-24T11:50:51Z",
+    "latest": "0.1.0",
+    "versions": [
+      {
+        "version": "0.1.0",
+        "type": "module",
+        "sdk": "^1.0",
+        "released": "2026-11-24T11:50:51Z",
+        "notes": {
+          "en": "First release: Kubernetes clusters, workloads and logs.",
+          "tr": "İlk sürüm: Kubernetes kümeleri, iş yükleri ve loglar."
+        },
+        "files": {
+          "darwin/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/kube-v0.1.0/kube-0.1.0-darwin-amd64.zip",
+            "sha256": "3b719805cd69e4b5db22ccfa77f932b7813e32d3c3978c647b4e55aea436a707",
+            "size": 5360677
+          },
+          "darwin/arm64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/kube-v0.1.0/kube-0.1.0-darwin-arm64.zip",
+            "sha256": "98e037d5d121eabc4c6867bce73c36c0f4a8cf49bb72f01f7a2bbc42490163d8",
+            "size": 4986970
+          },
+          "linux/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/kube-v0.1.0/kube-0.1.0-linux-amd64.zip",
+            "sha256": "d2361929099e806fcd92d57f699efa0ff0d698b4690aa242e17b32efb2b1a0cb",
+            "size": 5249746
+          },
+          "windows/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/kube-v0.1.0/kube-0.1.0-windows-amd64.zip",
+            "sha256": "096c3b4d05eb78c8ecbf8853639d64671052b4989b86195b267c6c52c1596aa5",
+            "size": 5416203
+          }
+        }
+      }
+    ]
+  },
+  "signatures": [
+    {
+      "keyid": "72f91e21d10b0178",
+      "sig": "r6vImYf/Wp6oRvBDb4a7r0qaW6SjG1tLFW3Mq3H1CTMvBGhlbJaohnnIvhRK/azMqY9PE5r0hXyYlYU09YSCAg=="
+    }
+  ]
+}

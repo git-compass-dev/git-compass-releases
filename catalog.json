@@ -2,8 +2,8 @@
   "signed": {
     "kind": "module-catalog",
     "schema": 1,
-    "sequence": 13,
-    "expires": "2027-03-24T11:48:23Z",
+    "sequence": 14,
+    "expires": "2027-03-24T11:50:51Z",
     "modules": [
       {
         "id": "db",
@@ -144,13 +144,27 @@
           "tr": "GitLab merge request, inceleme, pipeline, issue, proje ve uzak senkronizasyon (gitlab.com ve kendi sunucunuzdaki GitLab)."
         },
         "latest": "0.1.0"
+      },
+      {
+        "id": "kube",
+        "type": "module",
+        "group": "dev",
+        "name": {
+          "en": "Kubernetes",
+          "tr": "Kubernetes"
+        },
+        "description": {
+          "en": "Read-only cluster viewer: kubie contexts, namespaces, pods and logs. Never visible to AI features.",
+          "tr": "Salt okunur küme görüntüleyici: kubie context'leri, namespace'ler, pod'lar ve loglar. AI özellikleri hiç göremez."
+        },
+        "latest": "0.1.0"
       }
     ]
   },
   "signatures": [
     {
       "keyid": "72f91e21d10b0178",
-      "sig": "t6aniX4DTl5t3kFfBPgMjQ04CUbLdk6DD4DazMywUcXPom/uQ14CWqDINZoUZXkxZeXuxeD8AcsG6S6Z+YKwBQ=="
+      "sig": "RnWuPFEtbtNBGXy9+CnLxQXDUCZsOj7lvk9eQSKVw28830xefyeH1aNTWp8+m43St0FAhyBLoL5lGT10Jt+RAQ=="
     }
   ]
 }
