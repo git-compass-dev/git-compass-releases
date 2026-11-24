@@ -1,0 +1,53 @@
+{
+  "signed": {
+    "kind": "module-index",
+    "schema": 1,
+    "id": "db-postgres",
+    "sequence": 1,
+    "expires": "2027-03-24T11:44:14Z",
+    "latest": "1.0.0",
+    "versions": [
+      {
+        "version": "1.0.0",
+        "type": "driver",
+        "sdk": "^1.0",
+        "requires": {
+          "db": "^1.0"
+        },
+        "released": "2026-11-24T11:44:14Z",
+        "notes": {
+          "en": "First release: PostgreSQL driver.",
+          "tr": "İlk sürüm: PostgreSQL sürücüsü."
+        },
+        "files": {
+          "darwin/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/db-postgres-v1.0.0/db-postgres-1.0.0-darwin-amd64.zip",
+            "sha256": "aaf35a8913886742affe6be95ec9fdd9a89fb06508b6d270c26d58ec6884a464",
+            "size": 6250989
+          },
+          "darwin/arm64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/db-postgres-v1.0.0/db-postgres-1.0.0-darwin-arm64.zip",
+            "sha256": "8e699f5f760c337bd0e7e1941819f28c66362cb463499f96e9034133d97dd759",
+            "size": 5889733
+          },
+          "linux/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/db-postgres-v1.0.0/db-postgres-1.0.0-linux-amd64.zip",
+            "sha256": "fd076eea42931e1656d39a2ebf225bdb40a35c29c20dbc6ec5aa352f432ae073",
+            "size": 6091386
+          },
+          "windows/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/db-postgres-v1.0.0/db-postgres-1.0.0-windows-amd64.zip",
+            "sha256": "2e27e8091b8260f3c23f7425f6554e445b7570b269f83d878e93175f897c094b",
+            "size": 6296952
+          }
+        }
+      }
+    ]
+  },
+  "signatures": [
+    {
+      "keyid": "72f91e21d10b0178",
+      "sig": "Jn3MPvQwvVcQu14F7a5Woh9R3/dlWE5A826ejYaLfpogtHhQWZv3PU96qjmDwsDogweYLbJAcBvJZIh5c+NTAA=="
+    }
+  ]
+}

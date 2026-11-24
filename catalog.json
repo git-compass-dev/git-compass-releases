@@ -2,8 +2,8 @@
   "signed": {
     "kind": "module-catalog",
     "schema": 1,
-    "sequence": 10,
-    "expires": "2027-03-24T11:41:36Z",
+    "sequence": 11,
+    "expires": "2027-03-24T11:44:14Z",
     "modules": [
       {
         "id": "db",
@@ -16,6 +16,20 @@
         "description": {
           "en": "Database connections, SQL console, result grid, object tree, history, export and schema diagram.",
           "tr": "Veritabanı bağlantıları, SQL konsolu, sonuç tablosu, nesne ağacı, geçmiş, dışa aktarma ve şema diyagramı."
+        },
+        "latest": "1.0.0"
+      },
+      {
+        "id": "db-postgres",
+        "type": "driver",
+        "group": "data",
+        "name": {
+          "en": "PostgreSQL",
+          "tr": "PostgreSQL"
+        },
+        "description": {
+          "en": "PostgreSQL driver for Databases: SQL console, editing, object tree, EXPLAIN, sessions and locks, diagram.",
+          "tr": "Veritabanları için PostgreSQL sürücüsü: SQL konsolu, düzenleme, nesne ağacı, EXPLAIN, oturumlar ve kilitler, diyagram."
         },
         "latest": "1.0.0"
       },
@@ -108,7 +122,7 @@
   "signatures": [
     {
       "keyid": "72f91e21d10b0178",
-      "sig": "kfkkJnmmQH4HOtdw+nVHm0240CNjXnVr6oQiwO5+T6aWwcl7ZG5q0YMfxUjUOM5wIvY601qmSnzfd4rcy0IzBw=="
+      "sig": "sn9mZh9IqvudQpSfx1/ZQo0o5cJaDm8/SDPIg92dchVO9Q3j3yKvK1D0LoImO++Ka0NhXCvu4iJm5PmSf55qBQ=="
     }
   ]
 }
