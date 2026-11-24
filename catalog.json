@@ -2,8 +2,8 @@
   "signed": {
     "kind": "module-catalog",
     "schema": 1,
-    "sequence": 15,
-    "expires": "2027-03-24T11:52:58Z",
+    "sequence": 16,
+    "expires": "2027-03-24T11:54:08Z",
     "modules": [
       {
         "id": "ai",
@@ -18,6 +18,19 @@
           "tr": "Ajan sohbeti, AI terminalleri, ajan akışları ve Claude komutları."
         },
         "latest": "0.1.0"
+      },
+      {
+        "id": "dark",
+        "type": "theme",
+        "name": {
+          "en": "Dark themes",
+          "tr": "Koyu temalar"
+        },
+        "description": {
+          "en": "Calm (default), Dark and GitHub.",
+          "tr": "Sakin (varsayılan), Koyu ve GitHub."
+        },
+        "latest": "1.0.0"
       },
       {
         "id": "db",
@@ -178,7 +191,7 @@
   "signatures": [
     {
       "keyid": "72f91e21d10b0178",
-      "sig": "/kXXUbdOGs3VIFMPpZNeIclkj/a/ZaYBgu4eBeE74mXsLoOhuumP00W1EM+tZQSbAm4ZSoKQMVyN0CUk8iubBw=="
+      "sig": "arLQJJ68I3gDRwKB+jQ4XfJMHLCFWeLXQ89My1xSOVmY9QtweIP125Kce5wlKdsznkIfGobXaSPYyKK/0xH6Cg=="
     }
   ]
 }

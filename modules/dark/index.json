@@ -1,0 +1,35 @@
+{
+  "signed": {
+    "kind": "module-index",
+    "schema": 1,
+    "id": "dark",
+    "sequence": 1,
+    "expires": "2027-03-24T11:54:08Z",
+    "latest": "1.0.0",
+    "versions": [
+      {
+        "version": "1.0.0",
+        "type": "theme",
+        "app": "\u003e=2.0.0",
+        "released": "2026-11-24T11:54:08Z",
+        "notes": {
+          "en": "Calm (default), Dark and GitHub themes.",
+          "tr": "Sakin (varsayılan), Koyu ve GitHub temaları."
+        },
+        "files": {
+          "any": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/dark-v1.0.0/dark-1.0.0-any.zip",
+            "sha256": "e96671496f08979736a368856d7d3c0f3d9e9b0a03f799ed01662b61e2e091a5",
+            "size": 4179
+          }
+        }
+      }
+    ]
+  },
+  "signatures": [
+    {
+      "keyid": "72f91e21d10b0178",
+      "sig": "mMkAQ7+m7AtmtE8HcZm1vYYJQS/pLg4y4GjArb1MCZ3AP/blm7nMP9DXqyWgvhFL4WabY2e46FWVQ5Y/E+eRDQ=="
+    }
+  ]
+}
