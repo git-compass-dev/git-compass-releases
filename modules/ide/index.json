@@ -1,0 +1,50 @@
+{
+  "signed": {
+    "kind": "module-index",
+    "schema": 1,
+    "id": "ide",
+    "sequence": 1,
+    "expires": "2027-03-24T12:09:22Z",
+    "latest": "1.0.0",
+    "versions": [
+      {
+        "version": "1.0.0",
+        "type": "module",
+        "sdk": "^1.0",
+        "released": "2026-11-24T12:09:22Z",
+        "notes": {
+          "en": "First release: code editor (Files tab, quick open, split view, outline) and the language-server bridge.",
+          "tr": "İlk sürüm: kod editörü (Dosyalar sekmesi, hızlı açma, bölünmüş görünüm, anahat) ve dil sunucusu köprüsü."
+        },
+        "files": {
+          "darwin/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/ide-v1.0.0/ide-1.0.0-darwin-amd64.zip",
+            "sha256": "1ed926b6ce64873cbd1cb31160d8b2e04331fb78937ef1b6e7fc4aeec2ee8aeb",
+            "size": 9519685
+          },
+          "darwin/arm64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/ide-v1.0.0/ide-1.0.0-darwin-arm64.zip",
+            "sha256": "f5d623f4c255291f202b815fdce82c0bad12d1fa6366af55ddf63f1b95520c45",
+            "size": 9156268
+          },
+          "linux/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/ide-v1.0.0/ide-1.0.0-linux-amd64.zip",
+            "sha256": "77e5d0e9b8e9b762a4669416ff8bbcf99fcc47a930268be20c9bedad09a32afd",
+            "size": 9414667
+          },
+          "windows/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/ide-v1.0.0/ide-1.0.0-windows-amd64.zip",
+            "sha256": "57701b2ce0f20d7f8a390295d24bd4667973774b5e66150747d57c6dd2bbe141",
+            "size": 9571573
+          }
+        }
+      }
+    ]
+  },
+  "signatures": [
+    {
+      "keyid": "72f91e21d10b0178",
+      "sig": "bQY0b6vD7Hw/8UILVtTCPSr2VGEivUsPfALGlNxqg/jk8DLdKKkN5YsZITeeCWcIGUE8iSQOt7f9v+pAEsi8Aw=="
+    }
+  ]
+}

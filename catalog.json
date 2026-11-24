@@ -2,8 +2,8 @@
   "signed": {
     "kind": "module-catalog",
     "schema": 1,
-    "sequence": 17,
-    "expires": "2027-03-24T11:55:13Z",
+    "sequence": 18,
+    "expires": "2027-03-24T12:09:22Z",
     "modules": [
       {
         "id": "ai",
@@ -173,6 +173,20 @@
         "latest": "0.1.0"
       },
       {
+        "id": "ide",
+        "type": "module",
+        "group": "dev",
+        "name": {
+          "en": "Code editor",
+          "tr": "Kod düzenleyici"
+        },
+        "description": {
+          "en": "Files tab, editor, quick open, outline and language servers",
+          "tr": "Dosyalar sekmesi, düzenleyici, hızlı açma, ana hat ve dil sunucuları"
+        },
+        "latest": "1.0.0"
+      },
+      {
         "id": "kube",
         "type": "module",
         "group": "dev",
@@ -204,7 +218,7 @@
   "signatures": [
     {
       "keyid": "72f91e21d10b0178",
-      "sig": "NeCrbucj9tQTCEL1sofLSr/XZV3XSji2cosggeUdu6qS2fpyW+RlVDlB/IMyEu5gG94Esg1L9aoM/PsoGRIjDg=="
+      "sig": "AqRp2xXmFRcGyMFsMUx0UQ7/HxN1RqO2K91nzqNGqWqSPYfK8A/oejKN2vim37wDHmkQqpqi9MWerq7r4rIxBw=="
     }
   ]
 }
