@@ -3,10 +3,42 @@
     "kind": "module-index",
     "schema": 1,
     "id": "ide",
-    "sequence": 1,
-    "expires": "2027-03-24T12:09:22Z",
-    "latest": "1.0.0",
+    "sequence": 2,
+    "expires": "2027-03-25T12:51:59Z",
+    "latest": "1.0.1",
     "versions": [
+      {
+        "version": "1.0.1",
+        "type": "module",
+        "sdk": "^1.0",
+        "released": "2026-11-25T12:51:59Z",
+        "notes": {
+          "en": "Middle click on a Code tab closes it.",
+          "tr": "Code sekmeleri fare orta tıkıyla kapatılabilir."
+        },
+        "files": {
+          "darwin/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/ide-v1.0.1/ide-1.0.1-darwin-amd64.zip",
+            "sha256": "d4bb1d4be2fe81547674f96be4588d2f5804b326723cc1b9165227fe161f2b2e",
+            "size": 9519482
+          },
+          "darwin/arm64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/ide-v1.0.1/ide-1.0.1-darwin-arm64.zip",
+            "sha256": "08eba2e66b77df399c8ef09f264c60caa8113d903f06e230f59e3dafc1813b0a",
+            "size": 9156417
+          },
+          "linux/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/ide-v1.0.1/ide-1.0.1-linux-amd64.zip",
+            "sha256": "52ab1d082c51f901f26a7b467c79d432fedb07d2d56ce0bbecf715b5f1876055",
+            "size": 9414562
+          },
+          "windows/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/ide-v1.0.1/ide-1.0.1-windows-amd64.zip",
+            "sha256": "348fafa06b276816dc6f4bb0e96e72fee4241588a31a6236cf959d2988c46613",
+            "size": 9571659
+          }
+        }
+      },
       {
         "version": "1.0.0",
         "type": "module",
@@ -44,7 +76,7 @@
   "signatures": [
     {
       "keyid": "72f91e21d10b0178",
-      "sig": "bQY0b6vD7Hw/8UILVtTCPSr2VGEivUsPfALGlNxqg/jk8DLdKKkN5YsZITeeCWcIGUE8iSQOt7f9v+pAEsi8Aw=="
+      "sig": "nN1xNRASxDFpRo6qgz3y1zMhjLlh7iBeqxUM6fXcfF/p/VLTuC9L4Qb6yygT4S41CV5Q9w8CaZferXJCc0qFCQ=="
     }
   ]
 }

@@ -2,8 +2,8 @@
   "signed": {
     "kind": "module-catalog",
     "schema": 1,
-    "sequence": 34,
-    "expires": "2027-03-24T21:01:35Z",
+    "sequence": 35,
+    "expires": "2027-03-25T12:51:59Z",
     "modules": [
       {
         "id": "ai",
@@ -282,7 +282,7 @@
           "en": "Files tab, editor, quick open, outline and language servers",
           "tr": "Dosyalar sekmesi, düzenleyici, hızlı açma, ana hat ve dil sunucuları"
         },
-        "latest": "1.0.0"
+        "latest": "1.0.1"
       },
       {
         "id": "jira",
@@ -330,7 +330,7 @@
   "signatures": [
     {
       "keyid": "72f91e21d10b0178",
-      "sig": "qAR5wS5swOp6IJOMHk+sAVtRLvqcP+Rma7aRwQhshwnIonFD62j3Fp5wngOTLsVwH2znqHDOI6Dgx9lFVsf9Ag=="
+      "sig": "AMZlRw3SPaFEG06pm8FPUlVi/PTtXwcy65qpvWbwy5Ceuay56oFa6gG6NqxcCh5zOApYdgIAAP72qo2YmqjvDw=="
     }
   ]
 }
