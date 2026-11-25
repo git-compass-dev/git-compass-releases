@@ -1,0 +1,247 @@
+# Builds the Git Compass app (git-compass-core) for macOS, Windows and Linux,
+# publishes the installers as GitHub release "app-v<version>" in this repo and
+# signs app/index.json (the in-app updater's feed) with GC_SIGNING_KEY.
+#
+# Update payloads in the index: macOS = zipped universal git-compass.app,
+# Windows = the NSIS installer (per-user install), Linux = the AppImage.
+#
+# OS code signing is optional and runs only when its secrets are set:
+#   macOS:   APPLE_CERT_P12 (base64 Developer ID Application .p12),
+#            APPLE_CERT_PASSWORD, APPLE_SIGN_IDENTITY ("Developer ID Application: …"),
+#            and for notarization APPLE_ID, APPLE_TEAM_ID, APPLE_APP_PASSWORD
+#   Windows: WINDOWS_CERT_PFX (base64 .pfx), WINDOWS_CERT_PASSWORD
+# Without them the builds are unsigned (macOS: ad-hoc; first launch needs
+# right click → Open; Windows SmartScreen warns).
+name: publish-app
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: App version (x.y.z)
+        required: true
+      ref:
+        description: Branch, tag or commit of git-compass-core
+        required: true
+        default: main
+      notes_en:
+        description: Release notes (English)
+        required: false
+      notes_tr:
+        description: Release notes (Turkish)
+        required: false
+permissions:
+  contents: write
+concurrency:
+  group: registry
+  cancel-in-progress: false
+env:
+  GOPRIVATE: github.com/git-compass-dev/*
+  GOTOOLCHAIN: local
+  WAILS_VERSION: v3.1.0
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.v.outputs.version }}
+    steps:
+      - name: Check inputs and signing key
+        id: v
+        env:
+          GC_SIGNING_KEY: ${{ secrets.GC_SIGNING_KEY }}
+          VERSION: ${{ inputs.version }}
+        run: |
+          test -n "$GC_SIGNING_KEY" || (echo "::error::secret GC_SIGNING_KEY is not set" && exit 1)
+          v="${VERSION#v}"
+          [[ "$v" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]] || (echo "::error::version must be x.y.z" && exit 1)
+          echo "version=$v" >> "$GITHUB_OUTPUT"
+
+  build:
+    needs: check
+    strategy:
+      fail-fast: true
+      matrix:
+        include:
+          - os: macos-14
+            target: macos
+          - os: windows-latest
+            target: windows
+          - os: ubuntu-24.04
+            target: linux
+    runs-on: ${{ matrix.os }}
+    defaults:
+      run:
+        shell: bash
+    env:
+      VERSION: ${{ needs.check.outputs.version }}
+    steps:
+      - name: Access other git-compass-dev repos (read)
+        env:
+          GC_READ_TOKEN: ${{ secrets.GC_READ_TOKEN }}
+        run: |
+          git config --global url."https://x-access-token:${GC_READ_TOKEN}@github.com/git-compass-dev/".insteadOf "https://github.com/git-compass-dev/"
+      - name: Check out git-compass-core
+        uses: actions/checkout@v7
+        with:
+          repository: git-compass-dev/git-compass-core
+          ref: ${{ inputs.ref }}
+          token: ${{ secrets.GC_READ_TOKEN }}
+          persist-credentials: false
+      - uses: actions/setup-go@v7
+        with:
+          go-version-file: go.mod
+          cache: false
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '22'
+      - name: System packages (Linux)
+        if: matrix.target == 'linux'
+        run: sudo apt-get update && sudo apt-get install -y libgtk-4-dev libwebkitgtk-6.0-dev libfuse2
+      - name: NSIS (Windows)
+        if: matrix.target == 'windows'
+        run: choco install nsis -y --no-progress && echo "C:\Program Files (x86)\NSIS" >> "$GITHUB_PATH"
+      - name: wails3
+        run: go install github.com/wailsapp/wails/v3/cmd/wails3@${WAILS_VERSION}
+      - name: Stamp the version
+        run: bash scripts/set-version.sh "$VERSION"
+      - name: Test
+        if: matrix.target == 'linux'
+        run: |
+          (cd frontend && npm ci && npx tsc --noEmit && npx vitest run)
+          go test ./...
+
+      # ---- macOS: universal .app → zip (update payload) + dmg ----
+      - name: Build (macOS)
+        if: matrix.target == 'macos'
+        run: wails3 task darwin:package:universal VERSION="$VERSION"
+      - name: Sign and notarize (macOS, when the secrets are set)
+        if: matrix.target == 'macos' && env.APPLE_CERT_P12 != ''
+        env:
+          APPLE_CERT_P12: ${{ secrets.APPLE_CERT_P12 }}
+          APPLE_CERT_PASSWORD: ${{ secrets.APPLE_CERT_PASSWORD }}
+          APPLE_SIGN_IDENTITY: ${{ secrets.APPLE_SIGN_IDENTITY }}
+          APPLE_ID: ${{ secrets.APPLE_ID }}
+          APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
+          APPLE_APP_PASSWORD: ${{ secrets.APPLE_APP_PASSWORD }}
+        run: |
+          kc="$RUNNER_TEMP/sign.keychain-db"; pw=$(uuidgen)
+          security create-keychain -p "$pw" "$kc"
+          security set-keychain-settings -lut 3600 "$kc"
+          security unlock-keychain -p "$pw" "$kc"
+          echo "$APPLE_CERT_P12" | base64 --decode > "$RUNNER_TEMP/cert.p12"
+          security import "$RUNNER_TEMP/cert.p12" -k "$kc" -P "$APPLE_CERT_PASSWORD" -T /usr/bin/codesign
+          security set-key-partition-list -S apple-tool:,apple: -s -k "$pw" "$kc"
+          security list-keychains -d user -s "$kc" $(security list-keychains -d user | tr -d '"')
+          codesign --force --deep --options runtime --timestamp --sign "$APPLE_SIGN_IDENTITY" build/bin/git-compass.app
+          codesign --verify --deep --strict build/bin/git-compass.app
+          if [ -n "$APPLE_ID" ]; then
+            ditto -c -k --keepParent build/bin/git-compass.app "$RUNNER_TEMP/notarize.zip"
+            xcrun notarytool submit "$RUNNER_TEMP/notarize.zip" --apple-id "$APPLE_ID" --team-id "$APPLE_TEAM_ID" --password "$APPLE_APP_PASSWORD" --wait
+            xcrun stapler staple build/bin/git-compass.app
+          fi
+      - name: Package (macOS)
+        if: matrix.target == 'macos'
+        run: |
+          mkdir -p out
+          ditto -c -k --keepParent build/bin/git-compass.app "out/git-compass-$VERSION-macos-universal.zip"
+          wails3 task darwin:create:dmg DMG_FILE_ICON=build/darwin/icons.icns \
+            && mv build/bin/*.dmg "out/git-compass-$VERSION-macos-universal.dmg" \
+            || echo "::warning::dmg not built; the zip is the download"
+
+      # ---- Windows: per-user NSIS installer (also the update payload) ----
+      - name: Build (Windows)
+        if: matrix.target == 'windows'
+        run: wails3 task windows:package VERSION="$VERSION" INSTALL_SCOPE=user
+      - name: Sign (Windows, when the secrets are set)
+        if: matrix.target == 'windows' && env.WINDOWS_CERT_PFX != ''
+        env:
+          WINDOWS_CERT_PFX: ${{ secrets.WINDOWS_CERT_PFX }}
+          WINDOWS_CERT_PASSWORD: ${{ secrets.WINDOWS_CERT_PASSWORD }}
+        shell: pwsh
+        run: |
+          $pfx = Join-Path $env:RUNNER_TEMP "cert.pfx"
+          [IO.File]::WriteAllBytes($pfx, [Convert]::FromBase64String($env:WINDOWS_CERT_PFX))
+          $signtool = Get-ChildItem "C:\Program Files (x86)\Windows Kits\10\bin\*\x64\signtool.exe" | Select-Object -Last 1
+          & $signtool.FullName sign /f $pfx /p $env:WINDOWS_CERT_PASSWORD /fd sha256 /tr http://timestamp.digicert.com /td sha256 build\bin\git-compass-amd64-installer.exe
+      - name: Package (Windows)
+        if: matrix.target == 'windows'
+        run: |
+          mkdir -p out
+          mv build/bin/git-compass-amd64-installer.exe "out/git-compass-$VERSION-windows-amd64-installer.exe"
+
+      # ---- Linux: AppImage (update payload) + deb + rpm ----
+      - name: Build (Linux)
+        if: matrix.target == 'linux'
+        run: wails3 package VERSION="$VERSION"
+      - name: Package (Linux)
+        if: matrix.target == 'linux'
+        run: |
+          mkdir -p out
+          mv build/bin/*.AppImage "out/git-compass-$VERSION-linux-x86_64.AppImage"
+          for f in build/bin/*.deb; do mv "$f" "out/git-compass-$VERSION-linux-amd64.deb"; done
+          for f in build/bin/*.rpm; do mv "$f" "out/git-compass-$VERSION-linux-x86_64.rpm"; done
+
+      - uses: actions/upload-artifact@v6
+        with:
+          name: app-${{ matrix.target }}
+          path: out/*
+          if-no-files-found: error
+
+  publish:
+    needs: [check, build]
+    runs-on: ubuntu-latest
+    env:
+      VERSION: ${{ needs.check.outputs.version }}
+      TAG: app-v${{ needs.check.outputs.version }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - name: Access other git-compass-dev repos (read)
+        env:
+          GC_READ_TOKEN: ${{ secrets.GC_READ_TOKEN }}
+        run: git config --global url."https://x-access-token:${GC_READ_TOKEN}@github.com/git-compass-dev/".insteadOf "https://github.com/git-compass-dev/"
+      - uses: actions/setup-go@v7
+        with:
+          go-version-file: go.mod
+      - uses: actions/download-artifact@v7
+        with:
+          path: dist
+          merge-multiple: true
+      - name: Sign the app index
+        env:
+          GC_SIGNING_KEY: ${{ secrets.GC_SIGNING_KEY }}
+          NOTES_EN: ${{ inputs.notes_en }}
+          NOTES_TR: ${{ inputs.notes_tr }}
+        run: |
+          ls -l dist
+          go build -o "$RUNNER_TEMP/gcpack" ./cmd/gcpack
+          "$RUNNER_TEMP/gcpack" publish-app -repo . -version "$VERSION" \
+            -download-base "https://github.com/${GITHUB_REPOSITORY}/releases/download/${TAG}" \
+            -notes-en "$NOTES_EN" -notes-tr "$NOTES_TR" \
+            "darwin/arm64=dist/git-compass-$VERSION-macos-universal.zip" \
+            "darwin/amd64=dist/git-compass-$VERSION-macos-universal.zip" \
+            "windows/amd64=dist/git-compass-$VERSION-windows-amd64-installer.exe" \
+            "linux/amd64=dist/git-compass-$VERSION-linux-x86_64.AppImage"
+      - name: Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REF: ${{ inputs.ref }}
+          NOTES_EN: ${{ inputs.notes_en }}
+        run: |
+          if ! gh release view "$TAG" >/dev/null 2>&1; then
+            gh release create "$TAG" --target "$GITHUB_SHA" --title "Git Compass $VERSION" \
+              --notes "${NOTES_EN:-Git Compass $VERSION} (git-compass-core@${REF})"
+          fi
+          gh release upload "$TAG" dist/* --clobber
+      - name: Commit signed index
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add app
+          git commit -m "Publish $TAG"
+          git push "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" HEAD:main
+      - name: Verify
+        run: "$RUNNER_TEMP/gcpack" verify -repo .

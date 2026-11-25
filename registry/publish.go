@@ -45,7 +45,7 @@ func (r *Repo) LoadIndex(id string) (*Index, error) {
 	}
 	b, err := os.ReadFile(filepath.Join(r.Dir, filepath.FromSlash(IndexPath(id))))
 	if errors.Is(err, os.ErrNotExist) {
-		return &Index{Kind: KindIndex, Schema: Schema, ID: id}, nil
+		return &Index{Kind: kindFor(id), Schema: Schema, ID: id}, nil
 	}
 	if err != nil {
 		return nil, err
@@ -78,7 +78,7 @@ func (r *Repo) LoadCatalog() (*Catalog, error) {
 
 // SaveIndex bumps sequence + expiry, recomputes latest, signs and writes.
 func (r *Repo) SaveIndex(ix *Index) error {
-	ix.Kind, ix.Schema = KindIndex, Schema
+	ix.Kind, ix.Schema = kindFor(ix.ID), Schema
 	ix.Sequence++
 	ix.Expires = r.now().Add(DocumentTTL).Truncate(time.Second)
 	ix.SortVersions()
@@ -135,6 +135,9 @@ func (r *Repo) Publish(in PublishInput) (*Index, error) {
 	m := in.Manifest
 	if err := m.Validate(); err != nil {
 		return nil, err
+	}
+	if m.ID == AppID {
+		return nil, fmt.Errorf("publish: %q is reserved for the app", AppID)
 	}
 	if len(in.Artifacts) == 0 {
 		return nil, errors.New("publish: no artifacts")
@@ -195,6 +198,9 @@ func (r *Repo) updateCatalog(m manifest.Manifest, latest string) error {
 }
 
 func (r *Repo) setLatestInCatalog(id, latest string) error {
+	if id == AppID { // the app is not in the catalog
+		return nil
+	}
 	c, err := r.LoadCatalog()
 	if err != nil {
 		return err
@@ -285,6 +291,14 @@ func (r *Repo) Resign() ([]string, error) {
 		}
 		done = append(done, IndexPath(ix.ID))
 	}
+	if app, err := r.LoadIndex(AppID); err != nil {
+		return done, err
+	} else if len(app.Versions) > 0 {
+		if err := r.SaveIndex(app); err != nil {
+			return done, err
+		}
+		done = append(done, AppIndexPath)
+	}
 	c, err := r.LoadCatalog()
 	if err != nil {
 		return done, err
@@ -293,4 +307,50 @@ func (r *Repo) Resign() ([]string, error) {
 		return done, err
 	}
 	return append(done, CatalogPath), nil
+}
+
+// AppInput is one new release of the app itself.
+type AppInput struct {
+	Version string
+	// platform ("darwin/arm64") → the update payload for it. Several
+	// platforms may share one file (a universal macOS build).
+	Files map[string]string
+	// Payload URLs are DownloadBase + "/" + the file's base name.
+	DownloadBase string
+	Notes        map[string]string
+}
+
+// PublishApp adds an app release to app/index.json (not the catalog). Like
+// module versions, app versions are immutable.
+func (r *Repo) PublishApp(in AppInput) (*Index, error) {
+	if _, err := manifest.ParseVersion(in.Version); err != nil {
+		return nil, fmt.Errorf("publish-app: %w", err)
+	}
+	if len(in.Files) == 0 {
+		return nil, errors.New("publish-app: no files")
+	}
+	if in.DownloadBase == "" {
+		return nil, errors.New("publish-app: download base URL is required")
+	}
+	ix, err := r.LoadIndex(AppID)
+	if err != nil {
+		return nil, err
+	}
+	if ix.Find(in.Version) != nil {
+		return nil, fmt.Errorf("publish-app: %s is already published (versions are immutable)", in.Version)
+	}
+	rel := Release{Version: in.Version, Type: "app", Released: r.now().Truncate(time.Second), Notes: in.Notes, Files: map[string]File{}}
+	base := strings.TrimRight(in.DownloadBase, "/")
+	for plat, p := range in.Files {
+		if !strings.Contains(plat, "/") {
+			return nil, fmt.Errorf("publish-app: bad platform %q", plat)
+		}
+		sum, size, err := HashFile(p)
+		if err != nil {
+			return nil, err
+		}
+		rel.Files[plat] = File{URL: base + "/" + filepath.Base(p), SHA256: sum, Size: size}
+	}
+	ix.Versions = append(ix.Versions, rel)
+	return ix, r.SaveIndex(ix)
 }
