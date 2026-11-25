@@ -27,8 +27,27 @@ import (
 const (
 	KindIndex   = "module-index"
 	KindCatalog = "module-catalog"
-	Schema      = 1
+	// The app's own releases (the core updater): same Index shape, its own
+	// kind, never in the catalog.
+	KindAppIndex = "app-index"
+	Schema       = 1
 )
+
+// AppID is the index id of the Git Compass app itself (reserved: no module
+// may use it). Its files are per platform: the update payload the app's
+// updater downloads (macOS: zipped .app, Windows: installer, Linux: AppImage).
+const AppID = "git-compass"
+
+// AppIndexPath is where the app's index lives.
+const AppIndexPath = "app/index.json"
+
+// kindFor is the document kind of index id.
+func kindFor(id string) string {
+	if id == AppID {
+		return KindAppIndex
+	}
+	return KindIndex
+}
 
 // AnyPlatform is the Files key for packages without binaries (themes, languages).
 const AnyPlatform = "any"
@@ -37,7 +56,12 @@ const AnyPlatform = "any"
 const DefaultBaseURL = "https://raw.githubusercontent.com/git-compass-dev/git-compass-releases/main"
 
 // IndexPath and CatalogPath are relative to a base URL or a checkout.
-func IndexPath(id string) string { return "modules/" + id + "/index.json" }
+func IndexPath(id string) string {
+	if id == AppID {
+		return AppIndexPath
+	}
+	return "modules/" + id + "/index.json"
+}
 
 const CatalogPath = "catalog.json"
 
@@ -110,8 +134,8 @@ func ValidID(s string) bool { return idRe.MatchString(s) }
 
 // Validate checks an index that claims to be module id.
 func (ix *Index) Validate(id string) error {
-	if ix.Kind != KindIndex {
-		return fmt.Errorf("index: kind %q, want %q", ix.Kind, KindIndex)
+	if want := kindFor(id); ix.Kind != want {
+		return fmt.Errorf("index: kind %q, want %q", ix.Kind, want)
 	}
 	if ix.Schema != Schema {
 		return fmt.Errorf("index: unsupported schema %d", ix.Schema)

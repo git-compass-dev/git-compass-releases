@@ -42,6 +42,8 @@ func main() {
 		err = pack(os.Args[2:])
 	case "publish":
 		err = publish(os.Args[2:])
+	case "publish-app":
+		err = publishApp(os.Args[2:])
 	case "revoke":
 		err = revoke(os.Args[2:], true)
 	case "unrevoke":
@@ -62,7 +64,7 @@ func main() {
 }
 
 func usage() {
-	fmt.Fprintln(os.Stderr, "usage: gcpack keygen|pubkey|pack|publish|revoke|unrevoke|min-version|resign|verify [flags]")
+	fmt.Fprintln(os.Stderr, "usage: gcpack keygen|pubkey|pack|publish|publish-app|revoke|unrevoke|min-version|resign|verify [flags]")
 	os.Exit(2)
 }
 
@@ -162,6 +164,46 @@ func publish(args []string) error {
 	for _, a := range arts {
 		fmt.Println(a.Path)
 	}
+	return nil
+}
+
+// publishApp adds an app release: gcpack publish-app -version 0.3.0
+// -download-base URL darwin/arm64=path darwin/amd64=path windows/amd64=path …
+func publishApp(args []string) error {
+	fs := flag.NewFlagSet("publish-app", flag.ExitOnError)
+	repo := fs.String("repo", ".", "git-compass-releases checkout")
+	ver := fs.String("version", "", "app version (x.y.z)")
+	base := fs.String("download-base", "", "URL the files will be served from (release download URL)")
+	notesEN := fs.String("notes-en", "", "release notes (English)")
+	notesTR := fs.String("notes-tr", "", "release notes (Turkish)")
+	_ = fs.Parse(args)
+	files := map[string]string{}
+	for _, a := range fs.Args() {
+		plat, path, ok := strings.Cut(a, "=")
+		if !ok {
+			return fmt.Errorf("want platform=path, got %q", a)
+		}
+		files[plat] = path
+	}
+	r, err := signingRepo(*repo)
+	if err != nil {
+		return err
+	}
+	notes := map[string]string{}
+	if *notesEN != "" {
+		notes["en"] = *notesEN
+	}
+	if *notesTR != "" {
+		notes["tr"] = *notesTR
+	}
+	if len(notes) == 0 {
+		notes = nil
+	}
+	ix, err := r.PublishApp(registry.AppInput{Version: strings.TrimPrefix(*ver, "v"), Files: files, DownloadBase: *base, Notes: notes})
+	if err != nil {
+		return err
+	}
+	fmt.Fprintf(os.Stderr, "published app %s (sequence %d, latest %s)\n", *ver, ix.Sequence, ix.Latest)
 	return nil
 }
 
@@ -288,5 +330,20 @@ func verify(args []string) error {
 		fmt.Printf("%s ok: %d versions, latest %s, sequence %d, expires %s\n", e.ID, len(ix.Versions), ix.Latest, ix.Sequence, ix.Expires.Format(time.DateOnly))
 	}
 	fmt.Printf("catalog ok: %d modules, sequence %d\n", len(c.Modules), c.Sequence)
+	if b, err := os.ReadFile(filepath.Join(*repo, filepath.FromSlash(registry.AppIndexPath))); err == nil {
+		var ix registry.Index
+		if err := registry.OpenDocument(b, keys, &ix); err != nil {
+			return fmt.Errorf("app: %w", err)
+		}
+		if err := ix.Validate(registry.AppID); err != nil {
+			return err
+		}
+		if ix.Expired(now) {
+			return fmt.Errorf("app: index expired %s", ix.Expires)
+		}
+		fmt.Printf("app ok: %d versions, latest %s, sequence %d\n", len(ix.Versions), ix.Latest, ix.Sequence)
+	} else if !errors.Is(err, os.ErrNotExist) {
+		return err
+	}
 	return nil
 }

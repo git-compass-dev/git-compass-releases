@@ -10,6 +10,8 @@ reads this repository to list, install, update, roll back and disable modules.
 catalog.json                       signed list of published modules
 modules/<id>/index.json            signed per-module index: versions, files, revocations, minVersion
 GitHub release <id>-v<version>     the package archives (one zip per OS/arch)
+app/index.json                     signed index of the Git Compass app itself (in-app updater feed)
+GitHub release app-v<version>      the app installers (dmg/zip, NSIS exe, AppImage/deb/rpm)
 keys/registry.pub                  public key(s) the documents are signed with
 ```
 
@@ -45,6 +47,7 @@ pre-revocation index) and an `expires` date 120 days out (the monthly
 | `publish` | inputs `repo` (e.g. `git-compass-docker`), `ref`, notes. Tests and builds the module (`ALL=1 scripts/package.sh` → `dist/pkg`), packs per platform, signs, creates release `<id>-v<version>` with the zips, commits the index + catalog. Versions are immutable. |
 | `manage` | `revoke` / `unrevoke` a version (with a reason shown to users) or set `min-version`. |
 | `resign` | monthly (and manual): new sequence + expiry on every document. |
+| `publish-app` | inputs `version`, `ref` (of git-compass-core), notes. Builds the app on macOS (universal .app → zip + dmg), Windows (per-user NSIS installer) and Linux (AppImage, deb, rpm), creates release `app-v<version>`, signs `app/index.json`. Update payloads: macOS zip, Windows installer, Linux AppImage. Needs GitHub-hosted macOS and Windows runners. |
 | `ci` | `go test`, and `gcpack verify` of the committed documents. |
 
 Module repo contract: `manifest.json` (version = the version to publish) and
@@ -63,6 +66,12 @@ Module repo contract: `manifest.json` (version = the version to publish) and
   the public key in `keys/registry.pub` and in core's `OfficialKeys`, then
   keep `registry.key` offline (password manager). Never commit it.
 - `GC_READ_TOKEN` (already set): reads the private module repos while building.
+- Optional OS code signing for `publish-app` (without them builds are unsigned:
+  macOS needs right click → Open on first launch, Windows SmartScreen warns):
+  - macOS: `APPLE_CERT_P12` (base64 Developer ID Application .p12),
+    `APPLE_CERT_PASSWORD`, `APPLE_SIGN_IDENTITY`; notarization also needs
+    `APPLE_ID`, `APPLE_TEAM_ID`, `APPLE_APP_PASSWORD` (app-specific password).
+  - Windows: `WINDOWS_CERT_PFX` (base64 .pfx), `WINDOWS_CERT_PASSWORD`.
 - The repository must be **public** so the app can download archives and
   documents without a token.
 
