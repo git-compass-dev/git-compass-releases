@@ -244,4 +244,4 @@ jobs:
           git commit -m "Publish $TAG"
           git push "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" HEAD:main
       - name: Verify
-        run: "$RUNNER_TEMP/gcpack" verify -repo .
+        run: '"$RUNNER_TEMP/gcpack" verify -repo .'
