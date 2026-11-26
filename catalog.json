@@ -2,8 +2,8 @@
   "signed": {
     "kind": "module-catalog",
     "schema": 1,
-    "sequence": 35,
-    "expires": "2027-03-25T12:51:59Z",
+    "sequence": 36,
+    "expires": "2027-03-26T11:46:27Z",
     "modules": [
       {
         "id": "ai",
@@ -275,14 +275,14 @@
         "type": "module",
         "group": "dev",
         "name": {
-          "en": "Code editor",
-          "tr": "Kod düzenleyici"
+          "en": "Code editor and debugger",
+          "tr": "Kod düzenleyici ve hata ayıklayıcı"
         },
         "description": {
-          "en": "Files tab, editor, quick open, outline and language servers",
-          "tr": "Dosyalar sekmesi, düzenleyici, hızlı açma, ana hat ve dil sunucuları"
+          "en": "Code tab: editor, language servers, run and debug (breakpoints, variables, call stack, debug console)",
+          "tr": "Kod sekmesi: düzenleyici, dil sunucuları, çalıştırma ve hata ayıklama (kesme noktaları, değişkenler, çağrı yığını, hata ayıklama konsolu)"
         },
-        "latest": "1.0.1"
+        "latest": "2.0.0"
       },
       {
         "id": "jira",
@@ -330,7 +330,7 @@
   "signatures": [
     {
       "keyid": "72f91e21d10b0178",
-      "sig": "AMZlRw3SPaFEG06pm8FPUlVi/PTtXwcy65qpvWbwy5Ceuay56oFa6gG6NqxcCh5zOApYdgIAAP72qo2YmqjvDw=="
+      "sig": "t/hqiks3fGbPwJr+995Q+sPF2n9DeCUWeOz6zSUbuWnX+BFxU1WCAfThMrRM9XaWR8U2rfdT1o5YjQ60rwbpCQ=="
     }
   ]
 }

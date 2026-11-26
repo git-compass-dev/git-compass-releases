@@ -3,10 +3,42 @@
     "kind": "module-index",
     "schema": 1,
     "id": "ide",
-    "sequence": 2,
-    "expires": "2027-03-25T12:51:59Z",
-    "latest": "1.0.1",
+    "sequence": 3,
+    "expires": "2027-03-26T11:46:27Z",
+    "latest": "2.0.0",
     "versions": [
+      {
+        "version": "2.0.0",
+        "type": "module",
+        "sdk": "^1.2",
+        "released": "2026-11-26T11:46:27Z",
+        "notes": {
+          "en": "Code and debugger in one module: Explorer, Search and Run and Debug side tabs, Debug Console and Problems panels, draggable debug toolbar, launch.json run configurations with a form editor, several language servers per file, find and replace in files, Explorer file operations, file watcher, preview tabs. Replaces the separate debugger module.",
+          "tr": "Kod ve hata ayıklayıcı tek modülde: Gezgin, Ara ve Çalıştır ve Hata Ayıkla yan sekmeleri, Hata Ayıklama Konsolu ve Sorunlar panelleri, sürüklenebilir hata ayıklama araç çubuğu, form düzenleyicili launch.json yapılandırmaları, dosya başına birden çok dil sunucusu, dosyalarda ara/değiştir, gezgin dosya işlemleri, dosya izleme, önizleme sekmeleri. Ayrı debugger modülünün yerini alır."
+        },
+        "files": {
+          "darwin/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/ide-v2.0.0/ide-2.0.0-darwin-amd64.zip",
+            "sha256": "f34a0c0e5cb4d8439960917fae7c17d003da9cdadc7e8c5a057957d4d1524323",
+            "size": 9224862
+          },
+          "darwin/arm64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/ide-v2.0.0/ide-2.0.0-darwin-arm64.zip",
+            "sha256": "8c8de02feda79de01a615dd46147336300176b35f592a2b14937aa14620f1bb9",
+            "size": 8858439
+          },
+          "linux/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/ide-v2.0.0/ide-2.0.0-linux-amd64.zip",
+            "sha256": "08b72701540fb83049cee39757b657679ab79babaeebb4fa730ccf8849e0ce73",
+            "size": 9112138
+          },
+          "windows/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/ide-v2.0.0/ide-2.0.0-windows-amd64.zip",
+            "sha256": "c7548b97d7678d9585c0bfdca68d5e29e16ec5b087f226aa6d0b4d94eea19e57",
+            "size": 9281718
+          }
+        }
+      },
       {
         "version": "1.0.1",
         "type": "module",
@@ -76,7 +108,7 @@
   "signatures": [
     {
       "keyid": "72f91e21d10b0178",
-      "sig": "nN1xNRASxDFpRo6qgz3y1zMhjLlh7iBeqxUM6fXcfF/p/VLTuC9L4Qb6yygT4S41CV5Q9w8CaZferXJCc0qFCQ=="
+      "sig": "Oj1uikK/xKy2uttxdgWBV2JZ8eHFrOgM+zJ3smaE2aw4O0xM9ZNmcSYPHMkTciM0BT4itZp/OUsWaO+X9wCbBQ=="
     }
   ]
 }
