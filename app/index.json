@@ -1,0 +1,49 @@
+{
+  "signed": {
+    "kind": "app-index",
+    "schema": 1,
+    "id": "git-compass",
+    "sequence": 1,
+    "expires": "2027-03-26T14:47:41Z",
+    "latest": "0.1.0",
+    "versions": [
+      {
+        "version": "0.1.0",
+        "type": "app",
+        "released": "2026-11-26T14:47:41Z",
+        "notes": {
+          "en": "First Git Compass release with the in-app updater.",
+          "tr": "Uygulama içi güncelleyiciyle gelen ilk Git Compass sürümü."
+        },
+        "files": {
+          "darwin/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/app-v0.1.0/git-compass-0.1.0-macos-universal.zip",
+            "sha256": "3f1893188c5eb2d639606f79cc8b40f4fe0eeaf05b7110c9669c4ba965b96d92",
+            "size": 15123207
+          },
+          "darwin/arm64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/app-v0.1.0/git-compass-0.1.0-macos-universal.zip",
+            "sha256": "3f1893188c5eb2d639606f79cc8b40f4fe0eeaf05b7110c9669c4ba965b96d92",
+            "size": 15123207
+          },
+          "linux/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/app-v0.1.0/git-compass-0.1.0-linux-x86_64.AppImage",
+            "sha256": "ec4e43a83b3ff21a61108c67c22281a3c28ef5ad913a855c3d89842d23fcaf48",
+            "size": 83843576
+          },
+          "windows/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/app-v0.1.0/git-compass-0.1.0-windows-amd64-installer.exe",
+            "sha256": "5e78c2259698c65099413b32584ca0ef4947e7ce993343f77a6d2509a7ff4afa",
+            "size": 9901204
+          }
+        }
+      }
+    ]
+  },
+  "signatures": [
+    {
+      "keyid": "72f91e21d10b0178",
+      "sig": "4NEfY3zFU/blcyPxKFuPgL+A/KnMp64xg6SOXLdKI30BIlOdiHm4zPADHM2gJokIa1DBuo2WgOy0OeIa7d7IBw=="
+    }
+  ]
+}
