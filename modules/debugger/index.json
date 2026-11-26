@@ -3,9 +3,8 @@
     "kind": "module-index",
     "schema": 1,
     "id": "debugger",
-    "sequence": 1,
-    "expires": "2027-03-24T12:11:22Z",
-    "latest": "1.0.0",
+    "sequence": 2,
+    "expires": "2027-03-26T12:26:50Z",
     "versions": [
       {
         "version": "1.0.0",
@@ -19,6 +18,8 @@
           "en": "First release: Debug tab (breakpoints, stepping, variables, call stack, console).",
           "tr": "İlk sürüm: Debug sekmesi (breakpoint, adım adım, değişkenler, çağrı yığını, konsol)."
         },
+        "revoked": true,
+        "revokedReason": "Merged into Code 2.0 (ide). Kod 2.0 (ide) modülüne taşındı.",
         "files": {
           "darwin/amd64": {
             "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/debugger-v1.0.0/debugger-1.0.0-darwin-amd64.zip",
@@ -47,7 +48,7 @@
   "signatures": [
     {
       "keyid": "72f91e21d10b0178",
-      "sig": "DZ561z02+m8baniFA6tvHLRhpYZL/AnKejZrQQL0HoatOHu6ocpxHwnEhxFkcKmm0+9CO2LkSIure9Pddvz7Dw=="
+      "sig": "SxGnpc027EvdU8vDwHkSqZSqDuSbYCy+KJFNhnYJYDNLid72mhQmV5aNuJEZDjxl/hKJyAIxnOjUFtXO0vJbDA=="
     }
   ]
 }

@@ -2,8 +2,8 @@
   "signed": {
     "kind": "module-catalog",
     "schema": 1,
-    "sequence": 42,
-    "expires": "2027-03-26T12:02:24Z",
+    "sequence": 43,
+    "expires": "2027-03-26T12:26:50Z",
     "modules": [
       {
         "id": "ai",
@@ -99,8 +99,7 @@
         "description": {
           "en": "Debug tab: breakpoints, stepping, variables, call stack and debug console",
           "tr": "Hata ayıklama sekmesi: kesme noktaları, adım adım ilerleme, değişkenler, çağrı yığını ve konsol"
-        },
-        "latest": "1.0.0"
+        }
       },
       {
         "id": "debugger-go",
@@ -330,7 +329,7 @@
   "signatures": [
     {
       "keyid": "72f91e21d10b0178",
-      "sig": "UcMtwfKc4eZgaF5IqakNpgZj9/YvAJx6XWZRUleScTKrylUStNMz/c2vuJCCHdR+TfMOOo9hoQpp8lvVjamzCw=="
+      "sig": "HYCsjsI/Jv/FaEngH5dqNVPPmFnQJTqZtSNpJBr+hX9VI4MpzdwNFQ4OqbMMbDx9P4Luz3W1kXQil9bfQtI4Ag=="
     }
   ]
 }
