@@ -2,8 +2,8 @@
   "signed": {
     "kind": "module-catalog",
     "schema": 1,
-    "sequence": 39,
-    "expires": "2027-03-26T11:54:18Z",
+    "sequence": 40,
+    "expires": "2027-03-26T11:57:16Z",
     "modules": [
       {
         "id": "ai",
@@ -125,10 +125,10 @@
           "tr": "Java dili"
         },
         "description": {
-          "en": "Java language server and debugger for the editor and the Debug tab",
-          "tr": "Düzenleyici ve hata ayıklama sekmesi için Java dil sunucusu ve hata ayıklayıcısı"
+          "en": "Java language server and debugger for the editor and the Code tab",
+          "tr": "Düzenleyici ve Kod sekmesi için Java dil sunucusu ve hata ayıklayıcısı"
         },
-        "latest": "1.0.0"
+        "latest": "1.1.0"
       },
       {
         "id": "debugger-js",
@@ -330,7 +330,7 @@
   "signatures": [
     {
       "keyid": "72f91e21d10b0178",
-      "sig": "r/NCIzfr8zFTmvLnPdnPAmCu3fmoXRw3hb8NSJxrd4b5QHc2Kgm6KJPtyS/XbqOU8VvYTuY27xntZDLi0CiqAg=="
+      "sig": "bg0PZWJmswRDgNQQVAHl3z0vQUsWUQ8RZ38O3UyG0b4e9oi9AkeW7DUEZNWiOwVi3gSaH6WwmFSwHkIl96afDA=="
     }
   ]
 }

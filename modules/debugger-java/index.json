@@ -3,10 +3,45 @@
     "kind": "module-index",
     "schema": 1,
     "id": "debugger-java",
-    "sequence": 1,
-    "expires": "2027-03-24T12:15:26Z",
-    "latest": "1.0.0",
+    "sequence": 2,
+    "expires": "2027-03-26T11:57:16Z",
+    "latest": "1.1.0",
     "versions": [
+      {
+        "version": "1.1.0",
+        "type": "module",
+        "sdk": "^1.0",
+        "requires": {
+          "ide": "^2.0"
+        },
+        "released": "2026-11-26T11:57:16Z",
+        "notes": {
+          "en": "Works with Code 2.0 (the debugger is part of the Code module now). JDT LS starts at the nearest pom.xml / build.gradle.",
+          "tr": "Code 2.0 ile çalışır (hata ayıklayıcı artık Code modülünün parçası). JDT LS en yakın pom.xml / build.gradle klasöründe başlar."
+        },
+        "files": {
+          "darwin/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/debugger-java-v1.1.0/debugger-java-1.1.0-darwin-amd64.zip",
+            "sha256": "d32e8a3d748db0fc19cdfd5bb7aa3c4ebe7fd741a41764611291384108f47304",
+            "size": 5521940
+          },
+          "darwin/arm64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/debugger-java-v1.1.0/debugger-java-1.1.0-darwin-arm64.zip",
+            "sha256": "da2064e981a56e0964147d5356c1ce9523a37d7b907242bdca9a4950f890ba5b",
+            "size": 5145045
+          },
+          "linux/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/debugger-java-v1.1.0/debugger-java-1.1.0-linux-amd64.zip",
+            "sha256": "da60f0ec9da1e608092f18e7fa9e39a2babf8ce652ff5ef15e7f7836c17aac37",
+            "size": 5410604
+          },
+          "windows/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/debugger-java-v1.1.0/debugger-java-1.1.0-windows-amd64.zip",
+            "sha256": "f76327a94185b9a15327e9feb40d3c89007251cec3e844dfe9218dacc7043bf3",
+            "size": 5574349
+          }
+        }
+      },
       {
         "version": "1.0.0",
         "type": "module",
@@ -47,7 +82,7 @@
   "signatures": [
     {
       "keyid": "72f91e21d10b0178",
-      "sig": "BqNeExOqKg56LR1FMVvPzU5BednlGFfqCtjk0ogrd4vIsLna0+SZ22+x2G9cz/bVMwFIwtbE4KvzJ+zOLbKKAQ=="
+      "sig": "kDgwF8N/8P1ZqZbd5kuy8XsRwQToFLHlLPKzofm7AFWKimSe4WaaqG9Yz35+f+O8w41o+sakqSFD3/jtyPx0CA=="
     }
   ]
 }
