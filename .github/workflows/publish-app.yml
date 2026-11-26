@@ -35,6 +35,7 @@ concurrency:
   group: registry
   cancel-in-progress: false
 env:
+  GIT_TERMINAL_PROMPT: "0"
   GOPRIVATE: github.com/git-compass-dev/*
   GOTOOLCHAIN: local
   WAILS_VERSION: v3.1.0
@@ -80,7 +81,12 @@ jobs:
           GC_READ_TOKEN: ${{ secrets.GC_READ_TOKEN }}
         run: |
           git config --global url."https://x-access-token:${GC_READ_TOKEN}@github.com/git-compass-dev/".insteadOf "https://github.com/git-compass-dev/"
+          # macOS runners have the osxkeychain credential helper in the system
+          # config; storing the token there blocks on the locked keychain and
+          # hung checkout. No helper: the token is already in the URL/header.
+          git config --global credential.helper ""
       - name: Check out git-compass-core
+        timeout-minutes: 10
         uses: actions/checkout@v7
         with:
           repository: git-compass-dev/git-compass-core
