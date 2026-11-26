@@ -3,10 +3,45 @@
     "kind": "module-index",
     "schema": 1,
     "id": "debugger-ruby",
-    "sequence": 1,
-    "expires": "2027-03-24T12:24:34Z",
-    "latest": "1.0.0",
+    "sequence": 2,
+    "expires": "2027-03-26T11:59:45Z",
+    "latest": "1.1.0",
     "versions": [
+      {
+        "version": "1.1.0",
+        "type": "module",
+        "sdk": "^1.0",
+        "requires": {
+          "ide": "^2.0"
+        },
+        "released": "2026-11-26T11:59:45Z",
+        "notes": {
+          "en": "Works with Code 2.0 (the debugger is part of the Code module now). ruby-lsp starts at the nearest Gemfile.",
+          "tr": "Code 2.0 ile çalışır (hata ayıklayıcı artık Code modülünün parçası). ruby-lsp en yakın Gemfile klasöründe başlar."
+        },
+        "files": {
+          "darwin/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/debugger-ruby-v1.1.0/debugger-ruby-1.1.0-darwin-amd64.zip",
+            "sha256": "a853497adc8f6bc251962ed51542009e920933cdd6558c6fd2374dc6bc90ef78",
+            "size": 5483695
+          },
+          "darwin/arm64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/debugger-ruby-v1.1.0/debugger-ruby-1.1.0-darwin-arm64.zip",
+            "sha256": "28da6a52ea46bacb9e34872198276044db5b73e9950a590f90adec2f60449671",
+            "size": 5112585
+          },
+          "linux/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/debugger-ruby-v1.1.0/debugger-ruby-1.1.0-linux-amd64.zip",
+            "sha256": "7d0d715bbf8b0ffce2fc50013fe720c58e0ef12177e1510a24febdfd83d8f5f0",
+            "size": 5363691
+          },
+          "windows/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/debugger-ruby-v1.1.0/debugger-ruby-1.1.0-windows-amd64.zip",
+            "sha256": "6a4682d2e645ad499ffc1043d3f0a4e4dd2d88df0ad830174219903103120f96",
+            "size": 5528426
+          }
+        }
+      },
       {
         "version": "1.0.0",
         "type": "module",
@@ -47,7 +82,7 @@
   "signatures": [
     {
       "keyid": "72f91e21d10b0178",
-      "sig": "CwVNCGh1Cz/L593K640z4VoHlr5kiOirGqkpIoTK06SGxoXg2GRyz1UTL11nSDQ9eaXGvuk5Wk697wAgDPvqBQ=="
+      "sig": "NtuR/7exiTau1c96vDc9CY7jLy9OgLH2WPmqCLg41Z6rQZZ004YWcDCCWdk5RNPiYwsXYgOBMAzMsZAuNvhLDg=="
     }
   ]
 }

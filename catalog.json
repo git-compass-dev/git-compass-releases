@@ -2,8 +2,8 @@
   "signed": {
     "kind": "module-catalog",
     "schema": 1,
-    "sequence": 40,
-    "expires": "2027-03-26T11:57:16Z",
+    "sequence": 41,
+    "expires": "2027-03-26T11:59:45Z",
     "modules": [
       {
         "id": "ai",
@@ -167,10 +167,10 @@
           "tr": "Ruby dili"
         },
         "description": {
-          "en": "Ruby language server and debugger for the editor and the Debug tab",
-          "tr": "Düzenleyici ve hata ayıklama sekmesi için Ruby dil sunucusu ve hata ayıklayıcısı"
+          "en": "Ruby language server and debugger for the editor and the Code tab",
+          "tr": "Düzenleyici ve Kod sekmesi için Ruby dil sunucusu ve hata ayıklayıcısı"
         },
-        "latest": "1.0.0"
+        "latest": "1.1.0"
       },
       {
         "id": "debugger-rust",
@@ -330,7 +330,7 @@
   "signatures": [
     {
       "keyid": "72f91e21d10b0178",
-      "sig": "bg0PZWJmswRDgNQQVAHl3z0vQUsWUQ8RZ38O3UyG0b4e9oi9AkeW7DUEZNWiOwVi3gSaH6WwmFSwHkIl96afDA=="
+      "sig": "QCD2w0ZhGhvkQQRop4M49iW/AeDn+iltrk3aRvXIVKKb2ohB2zDLTqzbH0IV2Y13gXK6FcOB8rWIGjRqO6BSAw=="
     }
   ]
 }
