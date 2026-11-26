@@ -3,10 +3,45 @@
     "kind": "module-index",
     "schema": 1,
     "id": "debugger-go",
-    "sequence": 1,
-    "expires": "2027-03-24T12:13:18Z",
-    "latest": "1.0.0",
+    "sequence": 2,
+    "expires": "2027-03-26T11:49:20Z",
+    "latest": "1.1.0",
     "versions": [
+      {
+        "version": "1.1.0",
+        "type": "module",
+        "sdk": "^1.0",
+        "requires": {
+          "ide": "^2.0"
+        },
+        "released": "2026-11-26T11:49:20Z",
+        "notes": {
+          "en": "Works with Code 2.0 (the debugger is part of the Code module now). gopls starts at the nearest go.mod.",
+          "tr": "Code 2.0 ile çalışır (hata ayıklayıcı artık Code modülünün parçası). gopls en yakın go.mod klasöründe başlar."
+        },
+        "files": {
+          "darwin/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/debugger-go-v1.1.0/debugger-go-1.1.0-darwin-amd64.zip",
+            "sha256": "a868c9782ec5d81f59e13ea06d11b69d16ca8201eaa6f48137fda1c471e391f2",
+            "size": 5483808
+          },
+          "darwin/arm64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/debugger-go-v1.1.0/debugger-go-1.1.0-darwin-arm64.zip",
+            "sha256": "3e3c5f09d06556103ea8751121023a2666c1b41d3a602bc131bca90c5b3fcf8d",
+            "size": 5113145
+          },
+          "linux/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/debugger-go-v1.1.0/debugger-go-1.1.0-linux-amd64.zip",
+            "sha256": "d936e4441082a6c9111c755f3ea5b097323e290c514593e1d6c6a242bae175a9",
+            "size": 5364031
+          },
+          "windows/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/debugger-go-v1.1.0/debugger-go-1.1.0-windows-amd64.zip",
+            "sha256": "bc415136842b027cfd14d5332bc8d5349d2e32072b675bdf0734a4d6c640ccdb",
+            "size": 5528125
+          }
+        }
+      },
       {
         "version": "1.0.0",
         "type": "module",
@@ -47,7 +82,7 @@
   "signatures": [
     {
       "keyid": "72f91e21d10b0178",
-      "sig": "EXhCWa2gv0BsGoSs55AF8sxZmUiNVbIwcJiWpPTgf/fPK1N9o0A6qF0iujdeXc7Epm9DPSW7cRK9ZAkz1ZFTDw=="
+      "sig": "bhXEsJzoJoEAfdekNdVkv0Z1RvRWx7kGt9CoEeNqE7ovhy4fvZcP4RiRiMLdFEHsb2t/23YOpulDbfYeR9n0Cg=="
     }
   ]
 }
