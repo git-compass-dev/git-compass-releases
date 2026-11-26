@@ -3,10 +3,45 @@
     "kind": "module-index",
     "schema": 1,
     "id": "debugger-rust",
-    "sequence": 1,
-    "expires": "2027-03-24T12:26:11Z",
-    "latest": "1.0.0",
+    "sequence": 2,
+    "expires": "2027-03-26T12:02:24Z",
+    "latest": "1.1.0",
     "versions": [
+      {
+        "version": "1.1.0",
+        "type": "module",
+        "sdk": "^1.0",
+        "requires": {
+          "ide": "^2.0"
+        },
+        "released": "2026-11-26T12:02:24Z",
+        "notes": {
+          "en": "Works with Code 2.0 (the debugger is part of the Code module now). rust-analyzer starts at the nearest Cargo.toml.",
+          "tr": "Code 2.0 ile çalışır (hata ayıklayıcı artık Code modülünün parçası). rust-analyzer en yakın Cargo.toml klasöründe başlar."
+        },
+        "files": {
+          "darwin/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/debugger-rust-v1.1.0/debugger-rust-1.1.0-darwin-amd64.zip",
+            "sha256": "4558096a25ae08cdfe20194970e06611b022e60a644e6b560657bbf8d6c83463",
+            "size": 5519227
+          },
+          "darwin/arm64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/debugger-rust-v1.1.0/debugger-rust-1.1.0-darwin-arm64.zip",
+            "sha256": "ac014383ee783028a926ffa637c639e9919de69b1070ccfd2228981ff100ce4f",
+            "size": 5142484
+          },
+          "linux/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/debugger-rust-v1.1.0/debugger-rust-1.1.0-linux-amd64.zip",
+            "sha256": "b589ec1510137770a2e0730a26310dec5b63e7adcb38eccaf6981bda76e83210",
+            "size": 5408857
+          },
+          "windows/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/debugger-rust-v1.1.0/debugger-rust-1.1.0-windows-amd64.zip",
+            "sha256": "2d22944e206fed8a22f56d92bdc939eda20e6e6db5502b8813af20f9c946b852",
+            "size": 5571249
+          }
+        }
+      },
       {
         "version": "1.0.0",
         "type": "module",
@@ -47,7 +82,7 @@
   "signatures": [
     {
       "keyid": "72f91e21d10b0178",
-      "sig": "JNTexyeW9Pbgs0XlNxgiCu8wJP3Uh5LscAimuF6kySa1rNm9kEep3yPFntgPMn5MoN1c/n31Ph7YvPs+y9SkCw=="
+      "sig": "kM52bTlpktWPhUVpmUbYZ5fQiOjJ6nlLdU5nL4gKR92ON6+9q+iLAHlvqqo2Gw31edjWB0LoS8TOqQcsbj8PBA=="
     }
   ]
 }
