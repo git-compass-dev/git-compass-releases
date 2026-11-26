@@ -3,10 +3,42 @@
     "kind": "module-index",
     "schema": 1,
     "id": "git-base",
-    "sequence": 2,
-    "expires": "2027-03-24T13:39:19Z",
-    "latest": "0.1.1",
+    "sequence": 3,
+    "expires": "2027-03-26T12:35:34Z",
+    "latest": "0.1.3",
     "versions": [
+      {
+        "version": "0.1.3",
+        "type": "module",
+        "sdk": "^1.0",
+        "released": "2026-11-26T12:35:34Z",
+        "notes": {
+          "en": "Git log shows the project folder each command ran in. Fewer unnecessary git runs.",
+          "tr": "Git günlüğü her komutun çalıştığı proje klasörünü gösteriyor. Gereksiz git çağrıları azaltıldı."
+        },
+        "files": {
+          "darwin/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/git-base-v0.1.3/git-base-0.1.3-darwin-amd64.zip",
+            "sha256": "22d8099e2bd872784fa1833f6d6fc5fc8e70995f579c12759b49fb9d24430d72",
+            "size": 5449532
+          },
+          "darwin/arm64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/git-base-v0.1.3/git-base-0.1.3-darwin-arm64.zip",
+            "sha256": "b872e62640cd375a9113c8f526fd4d34b68b1844736d8b0bb373f53c4acbfa25",
+            "size": 5138234
+          },
+          "linux/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/git-base-v0.1.3/git-base-0.1.3-linux-amd64.zip",
+            "sha256": "12568803338afa6f120f294b9e93c1b0d6eec516b1a166057cfcbf6a60725349",
+            "size": 5320906
+          },
+          "windows/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/git-base-v0.1.3/git-base-0.1.3-windows-amd64.zip",
+            "sha256": "a638168532ed57cf9ade5fb8adc8c0e555f06c1f7a17bfabf75fe4db13aedbfe",
+            "size": 5498675
+          }
+        }
+      },
       {
         "version": "0.1.1",
         "type": "module",
@@ -76,7 +108,7 @@
   "signatures": [
     {
       "keyid": "72f91e21d10b0178",
-      "sig": "eFkADKA+JUlAczwTPWmKMTR9/X6E461xOMTneSRW+fXn5oo98vsSL85v7XckUUpK+rrCfrS17gDHYJdQJKUvAQ=="
+      "sig": "oLbEUlH+DnD0alHazKmQbyFBZgv4F4+ktfdj6mtytWx0jDKl//KYGp+FSUbDSKk4WQOdmW6qefdlqGicK4ENAA=="
     }
   ]
 }
