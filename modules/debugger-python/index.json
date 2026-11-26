@@ -3,10 +3,45 @@
     "kind": "module-index",
     "schema": 1,
     "id": "debugger-python",
-    "sequence": 1,
-    "expires": "2027-03-24T12:21:30Z",
-    "latest": "1.0.0",
+    "sequence": 2,
+    "expires": "2027-03-26T11:52:19Z",
+    "latest": "1.1.0",
     "versions": [
+      {
+        "version": "1.1.0",
+        "type": "module",
+        "sdk": "^1.0",
+        "requires": {
+          "ide": "^2.0"
+        },
+        "released": "2026-11-26T11:52:19Z",
+        "notes": {
+          "en": "Works with Code 2.0 (the debugger is part of the Code module now). The language server starts at the nearest pyproject.toml / setup.py.",
+          "tr": "Code 2.0 ile çalışır (hata ayıklayıcı artık Code modülünün parçası). Dil sunucusu en yakın pyproject.toml / setup.py klasöründe başlar."
+        },
+        "files": {
+          "darwin/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/debugger-python-v1.1.0/debugger-python-1.1.0-darwin-amd64.zip",
+            "sha256": "c3328bcf18fdb91f3ff2e4f9e2ddec2cfca2f4711d3d637e43097c6a40aac757",
+            "size": 5515496
+          },
+          "darwin/arm64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/debugger-python-v1.1.0/debugger-python-1.1.0-darwin-arm64.zip",
+            "sha256": "a7e2768e95583cbb412c604803b8d8cc84510e6f9fe4f7841045bd145fb3f528",
+            "size": 5141184
+          },
+          "linux/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/debugger-python-v1.1.0/debugger-python-1.1.0-linux-amd64.zip",
+            "sha256": "58c3ad6a9152b382e3886b53b636acd7ade453fae89bc191c06e503970a5c827",
+            "size": 5405325
+          },
+          "windows/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/debugger-python-v1.1.0/debugger-python-1.1.0-windows-amd64.zip",
+            "sha256": "660803002c88dc9311ef84b38dfd094bb3a260574c8bdcde7cae6d462255c633",
+            "size": 5570208
+          }
+        }
+      },
       {
         "version": "1.0.0",
         "type": "module",
@@ -47,7 +82,7 @@
   "signatures": [
     {
       "keyid": "72f91e21d10b0178",
-      "sig": "UhMSXHsPo+kxSqKDfzPjuAl/Vx1kiaOCWMF3XU2AAOq6C9fyI+RD++zJJOK/BaB6Ifmw9TfWXJbCIM9YkNpQAg=="
+      "sig": "mStPQ+STXMMk09ei6XlqmlqGhVOxqlINf/Eobno7tzaoEIj/c27mYE6lC/IjlCt0u00i9y/x+HHD4A3c+nfCAQ=="
     }
   ]
 }

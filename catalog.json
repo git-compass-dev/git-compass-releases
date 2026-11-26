@@ -2,8 +2,8 @@
   "signed": {
     "kind": "module-catalog",
     "schema": 1,
-    "sequence": 37,
-    "expires": "2027-03-26T11:49:20Z",
+    "sequence": 38,
+    "expires": "2027-03-26T11:52:19Z",
     "modules": [
       {
         "id": "ai",
@@ -153,10 +153,10 @@
           "tr": "Python dili"
         },
         "description": {
-          "en": "Python language server and debugger for the editor and the Debug tab",
-          "tr": "Düzenleyici ve hata ayıklama sekmesi için Python dil sunucusu ve hata ayıklayıcısı"
+          "en": "Python language server and debugger for the editor and the Code tab",
+          "tr": "Düzenleyici ve Kod sekmesi için Python dil sunucusu ve hata ayıklayıcısı"
         },
-        "latest": "1.0.0"
+        "latest": "1.1.0"
       },
       {
         "id": "debugger-ruby",
@@ -330,7 +330,7 @@
   "signatures": [
     {
       "keyid": "72f91e21d10b0178",
-      "sig": "6dgNgAPAcM5l4BfvguN3bSaejhlUBt3Z+pC8T4CNKpajJVPRgg/Rqi6jMW8QO74/O25bqRppbmu+OIskuUevAg=="
+      "sig": "Sc1tGjmdo1EGdIAsvNlTgUdm+EpkoWm0yhgn2jk9IreZnDgHr60yZQaz2dtQkGMdRbQOeSXazD9W7hpRQESDDQ=="
     }
   ]
 }
