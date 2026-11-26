@@ -59,7 +59,7 @@ jobs:
   build:
     needs: check
     strategy:
-      fail-fast: true
+      fail-fast: false
       matrix:
         include:
           - os: macos-latest
