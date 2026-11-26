@@ -62,7 +62,7 @@ jobs:
       fail-fast: true
       matrix:
         include:
-          - os: macos-14
+          - os: macos-latest
             target: macos
           - os: windows-latest
             target: windows
@@ -107,7 +107,7 @@ jobs:
       - name: Test
         if: matrix.target == 'linux'
         run: |
-          (cd frontend && npm ci && npx tsc --noEmit && npx vitest run)
+          (cd frontend && npm ci && npx tsc --noEmit && npx vitest run && npx vite build)
           go test ./...
 
       # ---- macOS: universal .app → zip (update payload) + dmg ----
