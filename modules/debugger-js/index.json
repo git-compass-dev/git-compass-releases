@@ -3,10 +3,45 @@
     "kind": "module-index",
     "schema": 1,
     "id": "debugger-js",
-    "sequence": 1,
-    "expires": "2027-03-24T12:18:19Z",
-    "latest": "1.0.0",
+    "sequence": 2,
+    "expires": "2027-03-26T11:54:18Z",
+    "latest": "1.1.0",
     "versions": [
+      {
+        "version": "1.1.0",
+        "type": "module",
+        "sdk": "^1.0",
+        "requires": {
+          "ide": "^2.0"
+        },
+        "released": "2026-11-26T11:54:18Z",
+        "notes": {
+          "en": "Works with Code 2.0 (the debugger is part of the Code module now). The TypeScript server starts at the nearest package.json / tsconfig.json, so a Wails app's frontend gets its own.",
+          "tr": "Code 2.0 ile çalışır (hata ayıklayıcı artık Code modülünün parçası). TypeScript sunucusu en yakın package.json / tsconfig.json klasöründe başlar; Wails uygulamasının frontend'i kendi sunucusunu alır."
+        },
+        "files": {
+          "darwin/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/debugger-js-v1.1.0/debugger-js-1.1.0-darwin-amd64.zip",
+            "sha256": "a5e73b37669b571b8bd3e6e40901812101cd3dbec8e9d907d46d80c2b898921a",
+            "size": 5519997
+          },
+          "darwin/arm64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/debugger-js-v1.1.0/debugger-js-1.1.0-darwin-arm64.zip",
+            "sha256": "df7b5df308f8e61491aa79956648f5a922a004c5293bb8c77306dbe97f7c2246",
+            "size": 5144409
+          },
+          "linux/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/debugger-js-v1.1.0/debugger-js-1.1.0-linux-amd64.zip",
+            "sha256": "b238da1bbc7f39242b21d341806cee570d5cc3e204376dd9a77b01866d441156",
+            "size": 5410062
+          },
+          "windows/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/debugger-js-v1.1.0/debugger-js-1.1.0-windows-amd64.zip",
+            "sha256": "ed97e9bec8f3557062dc2b450eab50373169eb5e5c1bcffb4e91c6f5cc337623",
+            "size": 5573591
+          }
+        }
+      },
       {
         "version": "1.0.0",
         "type": "module",
@@ -47,7 +82,7 @@
   "signatures": [
     {
       "keyid": "72f91e21d10b0178",
-      "sig": "xog9qs00pPtqoEA5sFiUTO/3pxhoT/muo1owEvhcI3Bupb74c7ep/dNpLuPK0mNIgn2A9H0faCKDXSaUy3TKBg=="
+      "sig": "UHnnar7tsjuS0AjO7MXCaDkiiaOH5Tyq6JPGgaircEdvF6nMVzF2bS97wDrHGk+kNmOazsvsCnto0CP31pdZCQ=="
     }
   ]
 }
