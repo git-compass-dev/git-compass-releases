@@ -3,10 +3,42 @@
     "kind": "module-index",
     "schema": 1,
     "id": "ai",
-    "sequence": 3,
-    "expires": "2027-03-24T14:23:35Z",
-    "latest": "0.2.0",
+    "sequence": 4,
+    "expires": "2027-03-27T12:20:01Z",
+    "latest": "0.2.1",
     "versions": [
+      {
+        "version": "0.2.1",
+        "type": "module",
+        "sdk": "^1.0",
+        "released": "2026-11-27T12:20:01Z",
+        "notes": {
+          "en": "AI Chat: choose any working folder (Workspace root / Projects / Custom).",
+          "tr": "AI Sohbet: istediğin çalışma klasörünü seç (Workspace kökü / Projeler / Özel)."
+        },
+        "files": {
+          "darwin/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/ai-v0.2.1/ai-0.2.1-darwin-amd64.zip",
+            "sha256": "55bce4b66e50b85521829c060443efcdf3e1fcb5e6dea118b4a99a4385e11a16",
+            "size": 5562455
+          },
+          "darwin/arm64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/ai-v0.2.1/ai-0.2.1-darwin-arm64.zip",
+            "sha256": "ed58c8f0ba5a06ffbece457dd4da94fa630696687fbf5a027bfc26d347236814",
+            "size": 5196719
+          },
+          "linux/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/ai-v0.2.1/ai-0.2.1-linux-amd64.zip",
+            "sha256": "8550e99a2907d12a3a6b0a4d6b105a3f17534bc1431dfd5fa356f050978db466",
+            "size": 5451149
+          },
+          "windows/amd64": {
+            "url": "https://github.com/git-compass-dev/git-compass-releases/releases/download/ai-v0.2.1/ai-0.2.1-windows-amd64.zip",
+            "sha256": "97af660ecab5d774dfbd89fd263ba8a56bffe1dfe992795907829836df06ae0f",
+            "size": 5629427
+          }
+        }
+      },
       {
         "version": "0.2.0",
         "type": "module",
@@ -108,7 +140,7 @@
   "signatures": [
     {
       "keyid": "72f91e21d10b0178",
-      "sig": "Z3E01nZmDfQF78Q8XxMM4/sEWLurpH0LQbYfIYGJs5x68XlOINKlqJ9kqdzsnzw0Lxco8XaTQ+trTJJ1GjtCDA=="
+      "sig": "OHIqViUeRBIm6N0CKcOELlBvaNTUAk0Exun1XM4Pyxfn1+o8KFMCoSyNpcaCg1MiVCNh85HjxqQ/XFrBJT2dCA=="
     }
   ]
 }
